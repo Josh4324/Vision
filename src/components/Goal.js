@@ -3,7 +3,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
-export default function Home() {
+export default function Goal() {
+  const goals = JSON.parse(localStorage.getItem("vision"));
+  console.log(goals);
   return (
     <div style={{ backgroundColor: "red" }}>
       <Header />
@@ -20,7 +22,7 @@ export default function Home() {
             marginRight: "auto",
           }}
         >
-          CHOOSE CATEGORY
+          YOUR GOALS
         </h3>
 
         <section

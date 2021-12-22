@@ -44,12 +44,97 @@ a.boardLink:hover {
   background-color: white !important;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .imgBlock {
   background-image: url(../public/images/bg-sec.png);
   background-repeat: no-repeat;
   width: 100%;
   height: 300px;
   color: "red";
+  background-size: auto;
+}
+
+.box {
+  width: 100% !important;
+  height: 100px;
+  background-image: url(../public/images/finance.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin-top: 50px;
+  color: white;
+  font-size: 24px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.boxe {
+  width: 100% !important;
+  height: 100px;
+  background-image: url(../public/images/education.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin-top: 50px;
+  color: white;
+  font-size: 24px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.boxc {
+  width: 100% !important;
+  height: 100px;
+  background-image: url(../public/images/career.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin-top: 50px;
+  color: white;
+  font-size: 24px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.boxf {
+  width: 100% !important;
+  height: 100px;
+  background-image: url(../public/images/family.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin-top: 50px;
+  color: white;
+  font-size: 24px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.boxh {
+  width: 100% !important;
+  height: 100px;
+  background-image: url(../public/images/health.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin-top: 50px;
+  color: white;
+  font-size: 24px;
+  padding: 25px;
+  box-sizing: border-box;
 }
 
 .box1 {
@@ -96,7 +181,17 @@ a.boardLink:hover {
   color: white;
   font-weight: bold;
   text-align: center;
+  padding-top: 40%;
+  font-size: 24px;
+  box-sizing: border-box;
+}
+
+.boxtext1 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
   padding-top: 20%;
   font-size: 24px;
   box-sizing: border-box;
+  cursor: pointer;
 }

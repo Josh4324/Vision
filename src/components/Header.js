@@ -20,11 +20,13 @@ export default function Header() {
             <img style={{ width: "50px" }} src="/images/logo.png" alt="logo" />
           </Link>
 
-          <div
-            style={{ paddingLeft: "10px", marginTop: "10px", color: "white" }}
-          >
-            MY VISION BOARD
-          </div>
+          <Link className="link" to="/">
+            <div
+              style={{ paddingLeft: "10px", marginTop: "10px", color: "white" }}
+            >
+              MY VISION BOARD
+            </div>
+          </Link>
         </div>
         <Link
           className="boardLink"
