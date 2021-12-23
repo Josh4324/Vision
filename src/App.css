@@ -212,3 +212,16 @@ span.boardLink:hover {
   top: -150px !important;
   left: 260px !important;
 }
+
+.next {
+  background-color: red;
+  opacity: 0.5;
+}
+
+.next1 {
+  background-color: red;
+}
+
+input:focus-visible {
+  outline: none;
+}
