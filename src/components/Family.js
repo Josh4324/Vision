@@ -1,7 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export default function Family() {
+export default function Family(props) {
+  const { addGoal } = props;
+  const navigate = useNavigate();
+  const addNewGoal = (name, category) => {
+    addGoal({ name, category });
+    navigate("/goals");
+  };
   return (
     <div>
       <main style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
@@ -15,21 +21,50 @@ export default function Family() {
             marginTop: "30px",
           }}
         >
-          <Link className="link" to="/category/finance">
-            <div className="box1 boxtext">Another Family Choice</div>
-          </Link>
-          <Link className="link" to="/category/health">
-            <div className="box2 boxtext">Another Family Choice</div>
-          </Link>
-          <Link className="link" to="/category/education">
-            <div className="box3 boxtext">Another Family Choice</div>
-          </Link>
-          <Link className="link" to="/category/career">
-            <div className="box4 boxtext">Another Family Choice</div>
-          </Link>
-          <Link className="link" to="/category/family">
-            <div className="box5 boxtext">Another Family Choice</div>
-          </Link>
+          <div
+            onClick={() => {
+              addNewGoal("Another Family Choice1", "family");
+            }}
+            className="box5 boxtext1"
+          >
+            Another Family Choice 1
+          </div>
+
+          <div
+            onClick={() => {
+              addNewGoal("Another Family Choice2", "family");
+            }}
+            className="box5 boxtext1"
+          >
+            Another Family Choice 2
+          </div>
+
+          <div
+            onClick={() => {
+              addNewGoal("Another Family Choice3", "family");
+            }}
+            className="box5 boxtext1"
+          >
+            Another Family Choice 3
+          </div>
+
+          <div
+            onClick={() => {
+              addNewGoal("Another Family Choice4", "family");
+            }}
+            className="box5 boxtext1"
+          >
+            Another Family Choice 4
+          </div>
+
+          <div
+            onClick={() => {
+              addNewGoal("Another Family Choice5", "family");
+            }}
+            className="box5 boxtext1"
+          >
+            Another Family Choice 5
+          </div>
         </section>
       </main>
     </div>

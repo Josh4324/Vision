@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 export default function Finance(props) {
   const { addGoal } = props;
-  const navigation = useNavigate();
-  const addNewGoal = (name) => {
-    addGoal(name);
-    navigation.push("/goals");
+  const navigate = useNavigate();
+  const addNewGoal = (name, category) => {
+    addGoal({ name, category });
+    navigate("/goals");
   };
   return (
     <div>
@@ -23,7 +23,7 @@ export default function Finance(props) {
         >
           <div
             onClick={() => {
-              addNewGoal("Save for University");
+              addNewGoal("Save for University", "finance");
             }}
             className="box1 boxtext1"
           >
@@ -32,7 +32,7 @@ export default function Finance(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Finance Choice1");
+              addNewGoal("Finance Choice1", "finance");
             }}
             className="box1 boxtext1"
           >
@@ -41,7 +41,7 @@ export default function Finance(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Finance Choice1");
+              addNewGoal("Finance Choice1", "finance");
             }}
             className="box1 boxtext1"
           >
@@ -50,7 +50,7 @@ export default function Finance(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Finance Choice2");
+              addNewGoal("Finance Choice2", "finance");
             }}
             className="box1 boxtext1"
           >
@@ -59,7 +59,7 @@ export default function Finance(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Finance Choice3");
+              addNewGoal("Finance Choice3", "finance");
             }}
             className="box1 boxtext1"
           >

@@ -44,6 +44,10 @@ a.boardLink:hover {
   background-color: white !important;
 }
 
+span.boardLink:hover {
+  background-color: white !important;
+}
+
 .link {
   text-decoration: none;
 }
@@ -194,4 +198,17 @@ a.boardLink:hover {
   font-size: 24px;
   box-sizing: border-box;
   cursor: pointer;
+}
+
+.addGoal {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-color: white;
+}
+
+.minus {
+  position: "relative" !important;
+  top: -150px !important;
+  left: 260px !important;
 }

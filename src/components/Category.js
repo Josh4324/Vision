@@ -18,7 +18,7 @@ export default function Category(...props) {
       localStorage.setItem("vision", JSON.stringify(goalList));
     } else {
       allgoals.push(name);
-      localStorage.setItem("vision");
+      localStorage.setItem("vision", JSON.stringify(allgoals));
     }
   };
   return (
