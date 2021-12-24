@@ -48,6 +48,30 @@ span.boardLink:hover {
   background-color: white !important;
 }
 
+span.boardLink1:hover {
+  background-color: white !important;
+  color: red;
+}
+
+.boardLink1 {
+  text-decoration: none;
+  background-color: red;
+  height: 30px;
+  padding-top: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  width: 200px;
+}
+
 .link {
   text-decoration: none;
 }
@@ -213,6 +237,14 @@ span.boardLink:hover {
   left: 260px !important;
 }
 
+.imgBlockList {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
 .next {
   background-color: red;
   opacity: 0.5;
@@ -224,4 +256,55 @@ span.boardLink:hover {
 
 input:focus-visible {
   outline: none;
+}
+
+.new-minus {
+  position: relative;
+  top: -150px;
+  left: 290px;
+}
+
+@media (max-width: 1200px) {
+  .imgBlockList {
+    flex-direction: column;
+    width: 350px;
+  }
+}
+
+@media (max-width: 550px) {
+  .boardnone {
+    display: none;
+  }
+
+  .box1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .box2 {
+    width: 300px;
+    height: 300px;
+  }
+  .box3 {
+    width: 300px;
+    height: 300px;
+  }
+  .box4 {
+    width: 300px;
+    height: 300px;
+  }
+  .box5 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .addGoal {
+    width: 300px;
+    height: 300px;
+  }
+
+  .new-minus {
+    left: 240px;
+    top: -120px;
+  }
 }

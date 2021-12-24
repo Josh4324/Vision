@@ -29,7 +29,7 @@ export default function Header() {
           </Link>
         </div>
         <Link
-          className="boardLink"
+          className="boardLink boardnone"
           style={{
             textDecoration: "none",
             backgroundColor: "yellow",

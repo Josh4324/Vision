@@ -60,12 +60,7 @@ export default function Goal() {
                         onClick={() => {
                           removeGoal(item.name);
                         }}
-                        class="fas fa-minus-circle"
-                        style={{
-                          position: "relative",
-                          top: "-150px",
-                          left: "260px",
-                        }}
+                        class="fas fa-minus-circle new-minus"
                       ></i>
                       {item.name}
                     </div>
@@ -76,12 +71,7 @@ export default function Goal() {
                         onClick={() => {
                           removeGoal(item.name);
                         }}
-                        class="fas fa-minus-circle"
-                        style={{
-                          position: "relative",
-                          top: "-150px",
-                          left: "260px",
-                        }}
+                        class="fas fa-minus-circle new-minus"
                       ></i>
                       {item.name}
                     </div>
@@ -92,12 +82,7 @@ export default function Goal() {
                         onClick={() => {
                           removeGoal(item.name);
                         }}
-                        class="fas fa-minus-circle"
-                        style={{
-                          position: "relative",
-                          top: "-150px",
-                          left: "260px",
-                        }}
+                        class="fas fa-minus-circle new-minus"
                       ></i>
                       {item.name}
                     </div>
@@ -108,12 +93,7 @@ export default function Goal() {
                         onClick={() => {
                           removeGoal(item.name);
                         }}
-                        class="fas fa-minus-circle"
-                        style={{
-                          position: "relative",
-                          top: "-150px",
-                          left: "260px",
-                        }}
+                        class="fas fa-minus-circle new-minus"
                       ></i>
                       {item.name}
                     </div>
@@ -124,12 +104,7 @@ export default function Goal() {
                         onClick={() => {
                           removeGoal(item.name);
                         }}
-                        class="fas fa-minus-circle"
-                        style={{
-                          position: "relative",
-                          top: "-150px",
-                          left: "260px",
-                        }}
+                        class="fas fa-minus-circle new-minus"
                       ></i>
                       {item.name}
                     </div>

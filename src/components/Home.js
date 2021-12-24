@@ -30,9 +30,13 @@ export default function Home() {
               paddingTop: "60px",
             }}
           >
-            <div>Vision Board helps you visualize your goals.</div>
-            <div>To achieve it, you have to</div>
-            <div>GO FOR IT!</div>
+            <div style={{ lineHeight: "2em" }}>
+              Vision Board helps you visualize your goals.
+            </div>
+            <div style={{ lineHeight: "2em" }}>To achieve it, you have to</div>
+            <div style={{ lineHeight: "2em" }}>GO FOR IT!</div>
+
+            <span className="boardLink1">WATCH VIDEO</span>
           </div>
         </div>
 
@@ -47,15 +51,7 @@ export default function Home() {
           Why do you need a vision board?
         </h3>
 
-        <div
-          style={{
-            width: "85%",
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="imgBlockList">
           <div className="imgBlock">
             <span
               style={{
