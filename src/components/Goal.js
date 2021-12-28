@@ -53,62 +53,14 @@ export default function Goal() {
           >
             {goals.map((item) => {
               return (
-                <div>
-                  {item.category === "finance" ? (
-                    <div className="box1 boxtext">
-                      <i
-                        onClick={() => {
-                          removeGoal(item.name);
-                        }}
-                        class="fas fa-minus-circle new-minus"
-                      ></i>
-                      {item.name}
-                    </div>
-                  ) : item.category === "health" ? (
-                    <div className="box2 boxtext">
-                      {" "}
-                      <i
-                        onClick={() => {
-                          removeGoal(item.name);
-                        }}
-                        class="fas fa-minus-circle new-minus"
-                      ></i>
-                      {item.name}
-                    </div>
-                  ) : item.category === "education" ? (
-                    <div className="box3 boxtext">
-                      {" "}
-                      <i
-                        onClick={() => {
-                          removeGoal(item.name);
-                        }}
-                        class="fas fa-minus-circle new-minus"
-                      ></i>
-                      {item.name}
-                    </div>
-                  ) : item.category === "career" ? (
-                    <div className="box4 boxtext">
-                      {" "}
-                      <i
-                        onClick={() => {
-                          removeGoal(item.name);
-                        }}
-                        class="fas fa-minus-circle new-minus"
-                      ></i>
-                      {item.name}
-                    </div>
-                  ) : item.category === "family" ? (
-                    <div className="box5 boxtext">
-                      {" "}
-                      <i
-                        onClick={() => {
-                          removeGoal(item.name);
-                        }}
-                        class="fas fa-minus-circle new-minus"
-                      ></i>
-                      {item.name}
-                    </div>
-                  ) : null}
+                <div className={`boxtext ${item.image}`}>
+                  <i
+                    onClick={() => {
+                      removeGoal(item.name);
+                    }}
+                    class="fas fa-minus-circle new-minus"
+                  ></i>
+                  {item.name}
                 </div>
               );
             })}

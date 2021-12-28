@@ -1,12 +1,18 @@
 import React from "react";
+import { NotificationManager } from "react-notifications";
 import { useNavigate } from "react-router-dom";
 
 export default function Finance(props) {
   const { addGoal } = props;
   const navigate = useNavigate();
-  const addNewGoal = (name, category) => {
-    addGoal({ name, category });
-    navigate("/goals");
+  const addNewGoal = (name, image) => {
+    const goals = JSON.parse(localStorage.getItem("vision"));
+    if (goals === null || goals.length < 5) {
+      addGoal({ name, image });
+      navigate("/goals");
+    } else {
+      NotificationManager.error("You cannot add more than 5 goals", "Error");
+    }
   };
   return (
     <div>
@@ -23,47 +29,47 @@ export default function Finance(props) {
         >
           <div
             onClick={() => {
-              addNewGoal("Save for University", "finance");
+              addNewGoal(" Save More Money", "box11");
             }}
-            className="box1 boxtext1"
+            className="box11 boxtext1"
           >
-            Save for University
+            Save More Money
           </div>
 
           <div
             onClick={() => {
-              addNewGoal("Finance Choice1", "finance");
+              addNewGoal("Start a business/side hustle", "box12");
             }}
-            className="box1 boxtext1"
+            className="box12 boxtext1"
           >
-            Finance Choice 1
+            Start a business/side hustle
           </div>
 
           <div
             onClick={() => {
-              addNewGoal("Finance Choice1", "finance");
+              addNewGoal("  Have a monthly budget", "box13");
             }}
-            className="box1 boxtext1"
+            className="box13 boxtext1"
           >
-            Finance Choice 1
+            Have a monthly budget
           </div>
 
           <div
             onClick={() => {
-              addNewGoal("Finance Choice2", "finance");
+              addNewGoal(" Invest more", "box14");
             }}
-            className="box1 boxtext1"
+            className="box14 boxtext1"
           >
-            Finance Choice 2
+            Invest more
           </div>
 
           <div
             onClick={() => {
-              addNewGoal("Finance Choice3", "finance");
+              addNewGoal("Read finance books/blogs", "box15");
             }}
-            className="box1 boxtext1"
+            className="box15 boxtext1"
           >
-            Finance Choice 3
+            Read finance books/blogs
           </div>
         </section>
       </main>

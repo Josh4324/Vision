@@ -23,47 +23,44 @@ export default function Career(props) {
         >
           <div
             onClick={() => {
-              addNewGoal("Another Career Choice1", "career");
+              addNewGoal("Get a job/new job", "box41");
             }}
-            className="box4 boxtext1"
+            className="box41 boxtext1"
           >
-            Another Career Choice 1
+            Get a job/new job
+          </div>
+          <div
+            onClick={() => {
+              addNewGoal("Learn a new skill", "box42");
+            }}
+            className="box42 boxtext1"
+          >
+            Learn a new skill
+          </div>
+          <div
+            onClick={() => {
+              addNewGoal("Go for an audition", "box43");
+            }}
+            className="box43 boxtext1"
+          >
+            Go for an audition
+          </div>
+          <div
+            onClick={() => {
+              addNewGoal(" Learn a new language", "box44");
+            }}
+            className="box44 boxtext1"
+          >
+            Learn a new language
           </div>
 
           <div
             onClick={() => {
-              addNewGoal("Another Career Choice2", "career");
+              addNewGoal("Get a professional certificate", "box45");
             }}
-            className="box4 boxtext1"
+            className="box45 boxtext1"
           >
-            Another Career Choice 2
-          </div>
-
-          <div
-            onClick={() => {
-              addNewGoal("Another Career Choice3", "career");
-            }}
-            className="box4 boxtext1"
-          >
-            Another Career Choice 3
-          </div>
-
-          <div
-            onClick={() => {
-              addNewGoal("Another Career Choice4", "career");
-            }}
-            className="box4 boxtext1"
-          >
-            Another Career Choice 4
-          </div>
-
-          <div
-            onClick={() => {
-              addNewGoal("Another Career Choice5", "career");
-            }}
-            className="box4 boxtext1"
-          >
-            Another Career Choice 5
+            Get a professional certificate
           </div>
         </section>
       </main>

@@ -1,13 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NotificationManager } from "react-notifications";
 import { useNavigate } from "react-router-dom";
 
 export default function Health(props) {
   const { addGoal } = props;
   const navigate = useNavigate();
-  const addNewGoal = (name, category) => {
-    addGoal({ name, category });
-    navigate("/goals");
+  const addNewGoal = (name, image) => {
+    const goals = JSON.parse(localStorage.getItem("vision"));
+    if (goals === null || goals.length < 5) {
+      addGoal({ name, image });
+      navigate("/goals");
+    } else {
+      NotificationManager.error("You cannot add more than 5 goals", "Error");
+    }
   };
   return (
     <div>
@@ -24,47 +29,44 @@ export default function Health(props) {
         >
           <div
             onClick={() => {
-              addNewGoal("Another Health Choice1", "health");
+              addNewGoal("Maintain a healthy Body Mass Index (BMI)", "box21");
             }}
-            className="box2 boxtext1"
+            className="box21 boxtext1"
           >
-            Another Health Choice
+            Maintain a healthy Body Mass Index (BMI)
+          </div>
+          <div
+            onClick={() => {
+              addNewGoal("Start working out", "box22");
+            }}
+            className="box22 boxtext1"
+          >
+            Start working out
+          </div>
+          <div
+            onClick={() => {
+              addNewGoal("Get health insurance", "box23");
+            }}
+            className="box23 boxtext1"
+          >
+            Get health insurance
+          </div>
+          <div
+            onClick={() => {
+              addNewGoal("Eat more fruits/healthy foods", "box24");
+            }}
+            className="box24 boxtext1"
+          >
+            Eat more fruits/healthy foods
           </div>
 
           <div
             onClick={() => {
-              addNewGoal("Another Health Choice2", "health");
+              addNewGoal("Drink more water", "box25");
             }}
-            className="box2 boxtext1"
+            className="box25 boxtext1"
           >
-            Another Health Choice
-          </div>
-
-          <div
-            onClick={() => {
-              addNewGoal("Another Health Choice3", "health");
-            }}
-            className="box2 boxtext1"
-          >
-            Another Health Choice
-          </div>
-
-          <div
-            onClick={() => {
-              addNewGoal("Another Health Choice4", "health");
-            }}
-            className="box2 boxtext1"
-          >
-            Another Health Choice
-          </div>
-
-          <div
-            onClick={() => {
-              addNewGoal("Another Health Choice5", "health");
-            }}
-            className="box2 boxtext1"
-          >
-            Another Health Choice
+            Drink more water
           </div>
         </section>
       </main>

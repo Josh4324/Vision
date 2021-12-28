@@ -1,12 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { NotificationManager } from "react-notifications";
 
 export default function Family(props) {
   const { addGoal } = props;
   const navigate = useNavigate();
-  const addNewGoal = (name, category) => {
-    addGoal({ name, category });
-    navigate("/goals");
+  const addNewGoal = (name, image) => {
+    const goals = JSON.parse(localStorage.getItem("vision"));
+    if (goals === null || goals.length < 5) {
+      addGoal({ name, image });
+      navigate("/goals");
+    } else {
+      NotificationManager.error("You cannot add more than 5 goals", "Error");
+    }
   };
   return (
     <div>
@@ -23,47 +29,47 @@ export default function Family(props) {
         >
           <div
             onClick={() => {
-              addNewGoal("Another Family Choice1", "family");
+              addNewGoal("Go on a vacation", "box51");
             }}
-            className="box5 boxtext1"
+            className="box51 boxtext1"
           >
-            Another Family Choice 1
+            Go on a vacation
           </div>
 
           <div
             onClick={() => {
-              addNewGoal("Another Family Choice2", "family");
+              addNewGoal("Get into a relationship", "box52");
             }}
-            className="box5 boxtext1"
+            className="box52 boxtext1"
           >
-            Another Family Choice 2
+            Get into a relationship
           </div>
 
           <div
             onClick={() => {
-              addNewGoal("Another Family Choice3", "family");
+              addNewGoal("Buy a house/car", "family");
             }}
-            className="box5 boxtext1"
+            className="box53 boxtext1"
           >
-            Another Family Choice 3
+            Buy a house/car
           </div>
 
           <div
             onClick={() => {
-              addNewGoal("Another Family Choice4", "family");
+              addNewGoal("Make more friends", "box54");
             }}
-            className="box5 boxtext1"
+            className="box54 boxtext1"
           >
-            Another Family Choice 4
+            Make more friends
           </div>
 
           <div
             onClick={() => {
-              addNewGoal("Another Family Choice5", "family");
+              addNewGoal("Find/Develop my talent", "box55");
             }}
-            className="box5 boxtext1"
+            className="box55 boxtext1"
           >
-            Another Family Choice 5
+            Find/Develop my talent
           </div>
         </section>
       </main>

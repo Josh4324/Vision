@@ -173,11 +173,91 @@ span.boardLink1:hover {
   background-repeat: no-repeat;
 }
 
+.box11 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/smm4.jpg);
+  background-repeat: no-repeat;
+}
+
+.box12 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/hus.jpg);
+  background-repeat: no-repeat;
+}
+
+.box13 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Have\ a\ monthly\ budget.jpg);
+  background-repeat: no-repeat;
+}
+
+.box14 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Invest\ more.jpg);
+  background-repeat: no-repeat;
+}
+
+.box15 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Read\ finance\ booksblogs.jpg);
+  background-repeat: no-repeat;
+}
+
 .box2 {
   width: 400px;
   height: 400px;
   margin: 15px;
   background-image: url(../public/images/health.jpg);
+  background-repeat: no-repeat;
+}
+
+.box21 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/bmi.jpg);
+  background-repeat: no-repeat;
+}
+
+.box22 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Start\ working\ out.jpg);
+  background-repeat: no-repeat;
+}
+
+.box23 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Get\ health\ insurance.jpg);
+  background-repeat: no-repeat;
+}
+
+.box24 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Eat\ more\ fruitshealthy\ foods.jpg);
+  background-repeat: no-repeat;
+}
+
+.box25 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Drink\ more\ water.jpg);
   background-repeat: no-repeat;
 }
 
@@ -189,11 +269,91 @@ span.boardLink1:hover {
   background-repeat: no-repeat;
 }
 
+.box31 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Get\ a\ degree.jpg);
+  background-repeat: no-repeat;
+}
+
+.box32 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Improve\ my\ grades.jpg);
+  background-repeat: no-repeat;
+}
+
+.box33 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Read\ more\ books.jpg);
+  background-repeat: no-repeat;
+}
+
+.box34 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Get\ a\ scholarship.jpg);
+  background-repeat: no-repeat;
+}
+
+.box35 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Complete\ a\ training\ course.jpg);
+  background-repeat: no-repeat;
+}
+
 .box4 {
   width: 400px;
   height: 400px;
   margin: 15px;
   background-image: url(../public/images/career.jpg);
+  background-repeat: no-repeat;
+}
+
+.box41 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Get\ a\ jobnew\ job.jpg);
+  background-repeat: no-repeat;
+}
+
+.box42 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Learn\ a\ new\ skill.jpg);
+  background-repeat: no-repeat;
+}
+
+.box43 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Go\ for\ an\ audition.jpg);
+  background-repeat: no-repeat;
+}
+
+.box44 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Learn\ a\ new\ language.jpg);
+  background-repeat: no-repeat;
+}
+
+.box45 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Get\ a\ professional\ certificate.jpg);
   background-repeat: no-repeat;
 }
 
@@ -205,17 +365,57 @@ span.boardLink1:hover {
   background-repeat: no-repeat;
 }
 
+.box51 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Go\ on\ a\ vacation.jpg);
+  background-repeat: no-repeat;
+}
+
+.box52 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Get\ into\ a\ relationship.jpg);
+  background-repeat: no-repeat;
+}
+
+.box53 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/Buy\ a\ housecar.jpg);
+  background-repeat: no-repeat;
+}
+
+.box54 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/family.jpg);
+  background-repeat: no-repeat;
+}
+
+.box55 {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  background-image: url(../public/images/FindDevelop\ my\ talent.jpg);
+  background-repeat: no-repeat;
+}
+
 .boxtext {
-  color: white;
+  color: black;
   font-weight: bold;
   text-align: center;
-  padding-top: 40%;
+  padding-top: 20%;
   font-size: 24px;
   box-sizing: border-box;
 }
 
 .boxtext1 {
-  color: white;
+  color: black;
   font-weight: bold;
   text-align: center;
   padding-top: 20%;
@@ -307,4 +507,13 @@ input:focus-visible {
     left: 240px;
     top: -120px;
   }
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
