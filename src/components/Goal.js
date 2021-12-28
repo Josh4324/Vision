@@ -1,10 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { NotificationManager } from "react-notifications";
 
 export default function Goal() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    return () => {};
+  }, []);
+  const nameRef = useRef("");
+  const emailRef = useRef("");
   const navigate = useNavigate();
   const [goals, setGoalList] = useState([]);
   const [next, setNext] = useState(false);
@@ -66,21 +73,23 @@ export default function Goal() {
                 </div>
               );
             })}
-            <Link to="/board" className="link">
-              <div className="addGoal">
-                <i
-                  class="fas fa-plus-circle"
-                  style={{
-                    fontSize: "100px",
-                    textAlign: "center",
-                    display: "block",
-                    paddingTop: "40%",
-                    boxSizing: "border-box",
-                    color: "red",
-                  }}
-                ></i>
-              </div>
-            </Link>
+            {goals.length >= 5 ? null : (
+              <Link to="/board" className="link">
+                <div className="addGoal">
+                  <i
+                    class="fas fa-plus-circle"
+                    style={{
+                      fontSize: "100px",
+                      textAlign: "center",
+                      display: "block",
+                      paddingTop: "40%",
+                      boxSizing: "border-box",
+                      color: "red",
+                    }}
+                  ></i>
+                </div>
+              </Link>
+            )}
           </section>
 
           <span
@@ -155,6 +164,7 @@ export default function Goal() {
             <div style={{ display: "flex" }}>
               <label>Name:</label>
               <input
+                ref={nameRef}
                 style={{
                   border: "none",
                   borderBottom: "1px solid red",
@@ -166,6 +176,7 @@ export default function Goal() {
             <div style={{ display: "flex" }}>
               <label>Emaill:</label>
               <input
+                ref={emailRef}
                 type="email"
                 style={{
                   border: "none",
@@ -212,9 +223,21 @@ export default function Goal() {
                 marginTop: "50px",
                 marginBottom: "30px",
                 width: "250px",
+                cursor: "pointer",
               }}
               onClick={() => {
-                navigate("/download");
+                if (
+                  nameRef.current.value === "" ||
+                  emailRef.current.value === ""
+                ) {
+                  NotificationManager.error(
+                    "Please enter your name and email",
+                    "Error"
+                  );
+                } else {
+                  localStorage.setItem("visionName", nameRef.current.value);
+                  navigate("/download");
+                }
               }}
               className="boardLink"
             >

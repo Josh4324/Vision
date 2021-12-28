@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { NotificationManager } from "react-notifications";
 
 export default function Family(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    return () => {};
+  }, []);
   const { addGoal } = props;
   const navigate = useNavigate();
-  const addNewGoal = (name, image) => {
+  const addNewGoal = (name, image, link) => {
     const goals = JSON.parse(localStorage.getItem("vision"));
     if (goals === null || goals.length < 5) {
-      addGoal({ name, image });
+      addGoal({ name, image, link });
       navigate("/goals");
     } else {
       NotificationManager.error("You cannot add more than 5 goals", "Error");
@@ -29,7 +33,11 @@ export default function Family(props) {
         >
           <div
             onClick={() => {
-              addNewGoal("Go on a vacation", "box51");
+              addNewGoal(
+                "Go on a vacation",
+                "box51",
+                "images/Go on a vacation.jpg"
+              );
             }}
             className="box51 boxtext1"
           >
@@ -38,7 +46,11 @@ export default function Family(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Get into a relationship", "box52");
+              addNewGoal(
+                "Get into a relationship",
+                "box52",
+                "images/Get into a relationship.jpg"
+              );
             }}
             className="box52 boxtext1"
           >
@@ -47,7 +59,11 @@ export default function Family(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Buy a house/car", "family");
+              addNewGoal(
+                "Buy a house/car",
+                "box53",
+                "images/Buy a housecar.jpg"
+              );
             }}
             className="box53 boxtext1"
           >
@@ -56,7 +72,7 @@ export default function Family(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Make more friends", "box54");
+              addNewGoal("Make more friends", "box54", "images/family.jpg");
             }}
             className="box54 boxtext1"
           >
@@ -65,7 +81,11 @@ export default function Family(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Find/Develop my talent", "box55");
+              addNewGoal(
+                "Find/Develop my talent",
+                "box55",
+                "images/FindDevelop my talent.jpg"
+              );
             }}
             className="box55 boxtext1"
           >

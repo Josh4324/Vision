@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    return () => {};
+  }, []);
   return (
     <div style={{ backgroundColor: "red" }}>
       <Header />

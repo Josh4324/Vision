@@ -5,6 +5,10 @@ import Header from "./Header";
 export default function Download() {
   let newimgs = [];
   useEffect(() => {
+    window.scrollTo(0, 0);
+    return () => {};
+  }, []);
+  useEffect(() => {
     const goals = JSON.parse(localStorage.getItem("vision"));
     goals.map((item, index) => {
       if (index === 0) {
@@ -48,7 +52,7 @@ export default function Download() {
       if (index === 3) {
         newimgs.push({
           uri: item.link,
-          x: 55,
+          x: 200,
           y: 290,
           sw: 120,
           sh: 120,
@@ -63,10 +67,19 @@ export default function Download() {
           sw: 120,
           sh: 120,
         });
+
+        newimgs.push({
+          uri: "/images/logo.jpg",
+          x: 150,
+          y: 120,
+          sw: 80,
+          sh: 30,
+        });
       }
     });
-    console.log(document.getElementById("canvas"));
+    console.log(newimgs);
     const getContext = () => document.getElementById("canvas").getContext("2d");
+    const ctx = document.getElementById("canvas").getContext("2d");
 
     // It's better to use async image loading.
     const loadImage = (url) => {
@@ -96,8 +109,27 @@ export default function Download() {
     };
 
     newimgs.forEach(depict);
+    setTimeout(() => {
+      ctx.font = "14px Futura";
+      ctx.fillStyle = "red";
+      ctx.fillText("MY VISION BOARD", 240, 140);
+      ctx.font = "12px Futura";
+      ctx.fillStyle = "white";
+      ctx.fillText("We wish you all the best, JOSHUA ADESANYA", 260, 450);
+    }, 2000);
+
     return () => {};
   }, []);
+
+  const download = () => {
+    const canvas = document.getElementById("canvas");
+    const dataURL = canvas.toDataURL("image/jpeg", 1.0);
+    const a = document.createElement("a");
+    a.download = "vision.png";
+    a.href = dataURL;
+    document.body.appendChild(a);
+    a.click();
+  };
 
   const imgs = [
     {
@@ -155,6 +187,7 @@ export default function Download() {
         height="500px"
         id="canvas"
       />
+      <button onClick={download}>DOWNLOAD</button>
 
       <Footer />
     </div>

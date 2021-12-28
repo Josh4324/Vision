@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -8,7 +8,11 @@ import Family from "./Family";
 import Career from "./Career";
 import Health from "./Health";
 
-export default function Category(...props) {
+export default function Category() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    return () => {};
+  }, []);
   const { category } = useParams();
   const addGoal = (name) => {
     let goalList = [];

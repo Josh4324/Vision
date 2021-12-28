@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { NotificationManager } from "react-notifications";
 
 export default function Career(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    return () => {};
+  }, []);
   const { addGoal } = props;
   const navigate = useNavigate();
   const addNewGoal = (name, image, link) => {
@@ -29,7 +33,11 @@ export default function Career(props) {
         >
           <div
             onClick={() => {
-              addNewGoal("Get a job/new job", "box41");
+              addNewGoal(
+                "Get a job/new job",
+                "box41",
+                "images/Get a jobnew job.jpg"
+              );
             }}
             className="box41 boxtext1"
           >
@@ -37,7 +45,11 @@ export default function Career(props) {
           </div>
           <div
             onClick={() => {
-              addNewGoal("Learn a new skill", "box42");
+              addNewGoal(
+                "Learn a new skill",
+                "box42",
+                "images/Learn a new skill.jpg"
+              );
             }}
             className="box42 boxtext1"
           >
@@ -45,7 +57,11 @@ export default function Career(props) {
           </div>
           <div
             onClick={() => {
-              addNewGoal("Go for an audition", "box43");
+              addNewGoal(
+                "Go for an audition",
+                "box43",
+                "images/Go for an audition.jpg"
+              );
             }}
             className="box43 boxtext1"
           >
@@ -53,7 +69,11 @@ export default function Career(props) {
           </div>
           <div
             onClick={() => {
-              addNewGoal(" Learn a new language", "box44");
+              addNewGoal(
+                " Learn a new language",
+                "box44",
+                "images/Learn a new language.jpg"
+              );
             }}
             className="box44 boxtext1"
           >
@@ -62,7 +82,11 @@ export default function Career(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Get a professional certificate", "box45");
+              addNewGoal(
+                "Get a professional certificate",
+                "box45",
+                "images/Get a professional certificate.jpg"
+              );
             }}
             className="box45 boxtext1"
           >

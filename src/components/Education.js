@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { NotificationManager } from "react-notifications";
 
 export default function Education(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    return () => {};
+  }, []);
   const { addGoal } = props;
   const navigate = useNavigate();
   const addNewGoal = (name, image, link) => {
@@ -40,7 +44,7 @@ export default function Education(props) {
               addNewGoal(
                 "Improve my grades",
                 "box32",
-                "images/Improve my grades.jpg)"
+                "images/Improve my grades.jpg"
               );
             }}
             className="box32 boxtext1"

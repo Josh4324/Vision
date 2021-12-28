@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NotificationManager } from "react-notifications";
 import { useNavigate } from "react-router-dom";
 
 export default function Finance(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    return () => {};
+  }, []);
   const { addGoal } = props;
   const navigate = useNavigate();
-  const addNewGoal = (name, image) => {
+  const addNewGoal = (name, image, link) => {
     const goals = JSON.parse(localStorage.getItem("vision"));
     if (goals === null || goals.length < 5) {
-      addGoal({ name, image });
+      addGoal({ name, image, link });
       navigate("/goals");
     } else {
       NotificationManager.error("You cannot add more than 5 goals", "Error");
@@ -29,7 +33,7 @@ export default function Finance(props) {
         >
           <div
             onClick={() => {
-              addNewGoal(" Save More Money", "box11");
+              addNewGoal(" Save More Money", "box11", "images/smm4.jpg");
             }}
             className="box11 boxtext1"
           >
@@ -38,7 +42,11 @@ export default function Finance(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Start a business/side hustle", "box12");
+              addNewGoal(
+                "Start a business/side hustle",
+                "box12",
+                "images/hus.jpg"
+              );
             }}
             className="box12 boxtext1"
           >
@@ -47,7 +55,11 @@ export default function Finance(props) {
 
           <div
             onClick={() => {
-              addNewGoal("  Have a monthly budget", "box13");
+              addNewGoal(
+                "  Have a monthly budget",
+                "box13",
+                "images/Have a monthly budget.jpg"
+              );
             }}
             className="box13 boxtext1"
           >
@@ -56,7 +68,7 @@ export default function Finance(props) {
 
           <div
             onClick={() => {
-              addNewGoal(" Invest more", "box14");
+              addNewGoal("Invest more", "box14", "images/Invest more.jpg");
             }}
             className="box14 boxtext1"
           >
@@ -65,7 +77,11 @@ export default function Finance(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Read finance books/blogs", "box15");
+              addNewGoal(
+                "Read finance books/blogs",
+                "box15",
+                "images/Read finance booksblogs.jpg"
+              );
             }}
             className="box15 boxtext1"
           >
