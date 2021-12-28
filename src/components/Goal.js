@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Goal() {
+  const navigate = useNavigate();
   const [goals, setGoalList] = useState([]);
   const [next, setNext] = useState(false);
   const removeGoal = (name) => {
@@ -211,7 +213,9 @@ export default function Goal() {
                 marginBottom: "30px",
                 width: "250px",
               }}
-              to="/board"
+              onClick={() => {
+                navigate("/download");
+              }}
               className="boardLink"
             >
               EXPORT YOUR VISION
