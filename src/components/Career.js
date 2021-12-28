@@ -1,12 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { NotificationManager } from "react-notifications";
 
 export default function Career(props) {
   const { addGoal } = props;
   const navigate = useNavigate();
-  const addNewGoal = (name, category) => {
-    addGoal({ name, category });
-    navigate("/goals");
+  const addNewGoal = (name, image, link) => {
+    const goals = JSON.parse(localStorage.getItem("vision"));
+    if (goals === null || goals.length < 5) {
+      addGoal({ name, image, link });
+      navigate("/goals");
+    } else {
+      NotificationManager.error("You cannot add more than 5 goals", "Error");
+    }
   };
   return (
     <div>

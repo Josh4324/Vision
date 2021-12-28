@@ -5,10 +5,10 @@ import { NotificationManager } from "react-notifications";
 export default function Education(props) {
   const { addGoal } = props;
   const navigate = useNavigate();
-  const addNewGoal = (name, image) => {
+  const addNewGoal = (name, image, link) => {
     const goals = JSON.parse(localStorage.getItem("vision"));
     if (goals === null || goals.length < 5) {
-      addGoal({ name, image });
+      addGoal({ name, image, link });
       navigate("/goals");
     } else {
       NotificationManager.error("You cannot add more than 5 goals", "Error");
@@ -29,7 +29,7 @@ export default function Education(props) {
         >
           <div
             onClick={() => {
-              addNewGoal(" Get a degree", "box31");
+              addNewGoal("Get a degree", "box31", "images/Get a degree.jpg");
             }}
             className="box31 boxtext1"
           >
@@ -37,7 +37,11 @@ export default function Education(props) {
           </div>
           <div
             onClick={() => {
-              addNewGoal("Improve my grades", "box32");
+              addNewGoal(
+                "Improve my grades",
+                "box32",
+                "images/Improve my grades.jpg)"
+              );
             }}
             className="box32 boxtext1"
           >
@@ -45,7 +49,11 @@ export default function Education(props) {
           </div>
           <div
             onClick={() => {
-              addNewGoal("Read more books", "box33");
+              addNewGoal(
+                "Read more books",
+                "box33",
+                "images/Read more books.jpg"
+              );
             }}
             className="box33 boxtext1"
           >
@@ -53,7 +61,11 @@ export default function Education(props) {
           </div>
           <div
             onClick={() => {
-              addNewGoal(" Get a scholarship", "box34");
+              addNewGoal(
+                " Get a scholarship",
+                "box34",
+                "images/Get a scholarship.jpg"
+              );
             }}
             className="box34 boxtext1"
           >
@@ -62,7 +74,11 @@ export default function Education(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Complete a training course", "box35");
+              addNewGoal(
+                "Complete a training course",
+                "box35",
+                "images/Complete a training course.jpg"
+              );
             }}
             className="box35 boxtext1"
           >

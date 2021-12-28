@@ -3,7 +3,68 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 export default function Download() {
+  let newimgs = [];
   useEffect(() => {
+    const goals = JSON.parse(localStorage.getItem("vision"));
+    goals.map((item, index) => {
+      if (index === 0) {
+        newimgs.push({
+          uri: "/images/bg-sec.png",
+          x: 50,
+          y: 55,
+          sw: 400,
+          sh: 400,
+        });
+
+        newimgs.push({
+          uri: item.link,
+          x: 135,
+          y: 160,
+          sw: 120,
+          sh: 120,
+        });
+      }
+
+      if (index === 1) {
+        newimgs.push({
+          uri: item.link,
+          x: 265,
+          y: 160,
+          sw: 120,
+          sh: 120,
+        });
+      }
+
+      if (index === 2) {
+        newimgs.push({
+          uri: item.link,
+          x: 55,
+          y: 290,
+          sw: 120,
+          sh: 120,
+        });
+      }
+
+      if (index === 3) {
+        newimgs.push({
+          uri: item.link,
+          x: 55,
+          y: 290,
+          sw: 120,
+          sh: 120,
+        });
+      }
+
+      if (index === 4) {
+        newimgs.push({
+          uri: item.link,
+          x: 345,
+          y: 290,
+          sw: 120,
+          sh: 120,
+        });
+      }
+    });
     console.log(document.getElementById("canvas"));
     const getContext = () => document.getElementById("canvas").getContext("2d");
 
@@ -34,7 +95,7 @@ export default function Download() {
       });
     };
 
-    imgs.forEach(depict);
+    newimgs.forEach(depict);
     return () => {};
   }, []);
 
@@ -76,7 +137,7 @@ export default function Download() {
       sh: 120,
     },
     {
-      uri: "/images/Learn a new skill.jpg",
+      uri: "/images/Get a degree.jpg",
       x: 345,
       y: 290,
       sw: 120,
