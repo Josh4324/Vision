@@ -112,7 +112,7 @@ export default function Download() {
         });
 
         newimgs.push({
-          uri: "/images/logo.jpg",
+          uri: "/images/logo_dano.jpg",
           x: 130,
           y: 120,
           sw: 60,
@@ -157,11 +157,11 @@ export default function Download() {
     setTimeout(() => {
       ctx.font = "14px Futura";
       ctx.fillStyle = "red";
-      ctx.fillText("MY VISION BOARD", 200, 145);
+      ctx.fillText("MY VISION BOARD", 200, 150);
       ctx.font = "12px Futura";
       ctx.fillStyle = "white";
       ctx.fillText(`We wish you all the best, ${name}`, 260, 450);
-    }, 2000);
+    }, 1000);
 
     setTimeout(() => {
       newtext.map((item) => {
