@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   const videoRef = useRef("");
+  const homeRef = useRef("");
+  const modalRef = useRef("");
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
@@ -14,23 +16,22 @@ export default function Home() {
     console.log("play");
     console.log(videoRef.current);
     videoRef.current.classList.toggle("none");
+    console.log(homeRef.current);
+    modalRef.current.classList.add("pop1");
     videoRef.current.play();
   };
 
   const removeVideo = (evt) => {
-    console.log("checking");
-    console.log(evt.target.tagName);
-    if (evt.target.tagName !== "SPAN") {
-      videoRef.current.pause();
-      videoRef.current.classList.toggle("none");
-    }
+    modalRef.current.classList.remove("pop1");
+    videoRef.current.pause();
+    videoRef.current.classList.toggle("none");
   };
   return (
-    <div style={{ backgroundColor: "red" }}>
+    <div className="pop">
+      <div ref={modalRef} onClick={removeVideo} className=""></div>
       <Header />
       <main>
         <div
-          onClick={removeVideo}
           style={{
             width: "80%",
             height: "400px",

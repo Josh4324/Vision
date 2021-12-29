@@ -2,6 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Header() {
+  const goals = JSON.parse(localStorage.getItem("vision"));
+  let linkurl;
+  if (goals !== null && goals.length === 5) {
+    linkurl = "/goals";
+  } else {
+    linkurl = "/board";
+  }
   return (
     <div>
       <header
@@ -41,7 +48,7 @@ export default function Header() {
             borderRadius: "10px",
             fontWeight: "bold",
           }}
-          to="/board"
+          to={linkurl}
         >
           CREATE YOUR VISION BOARD
         </Link>
