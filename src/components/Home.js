@@ -1,18 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  const videoRef = useRef("");
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
   }, []);
+
+  const playVideo = () => {
+    console.log("play");
+    console.log(videoRef.current);
+    videoRef.current.classList.toggle("none");
+    videoRef.current.play();
+  };
+
+  const removeVideo = (evt) => {
+    console.log("checking");
+    console.log(evt.target.tagName);
+    if (evt.target.tagName === "DIV") {
+      videoRef.current.pause();
+      videoRef.current.classList.toggle("none");
+    }
+  };
   return (
     <div style={{ backgroundColor: "red" }}>
       <Header />
       <main>
         <div
+          onClick={removeVideo}
           style={{
             width: "80%",
             height: "400px",
@@ -40,7 +58,9 @@ export default function Home() {
             <div style={{ lineHeight: "2em" }}>To achieve it, you have to</div>
             <div style={{ lineHeight: "2em" }}>GO FOR IT!</div>
 
-            <span className="boardLink1">WATCH VIDEO</span>
+            <span onClick={playVideo} className="boardLink1">
+              WATCH VIDEO
+            </span>
           </div>
         </div>
 
@@ -157,6 +177,16 @@ export default function Home() {
         >
           CREATE YOUR VISION BOARD
         </Link>
+
+        <video
+          id="video"
+          class="video none"
+          src="https://res.cloudinary.com/josh4324/video/upload/v1640763780/Dano_Board_Video_1_ftzk7e.mp4"
+          type="video/mp4"
+          preload="true"
+          controls
+          ref={videoRef}
+        ></video>
       </main>
       <Footer />
     </div>

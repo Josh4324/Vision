@@ -55,6 +55,7 @@ span.boardLink1:hover {
 
 .boardLink1 {
   text-decoration: none;
+  cursor: pointer;
   background-color: red;
   height: 30px;
   padding-top: 4px;
@@ -476,6 +477,10 @@ input:focus-visible {
     display: none;
   }
 
+  .video {
+    width: 300px !important;
+  }
+
   .box1 {
     width: 300px;
     height: 300px;
@@ -517,4 +522,19 @@ input:focus-visible {
   right: 0;
   margin: auto;
   background-color: red;
+}
+
+.video {
+  width: 400px;
+  height: 300px;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+}
+
+.none {
+  display: none;
 }
