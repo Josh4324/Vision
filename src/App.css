@@ -52,7 +52,9 @@ span.boardLink1:hover {
   background-color: white !important;
   color: red;
 }
-
+.banner {
+  background-image: url(../public/images/banner.jpg);
+}
 .boardLink1 {
   text-decoration: none;
   cursor: pointer;

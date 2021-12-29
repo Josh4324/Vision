@@ -13,8 +13,6 @@ export default function Home() {
   }, []);
 
   const playVideo = () => {
-    console.log("play");
-    console.log(videoRef.current);
     videoRef.current.classList.toggle("none");
     console.log(homeRef.current);
     modalRef.current.classList.add("pop1");
@@ -32,6 +30,7 @@ export default function Home() {
       <Header />
       <main>
         <div
+          className="banner"
           style={{
             width: "80%",
             height: "400px",

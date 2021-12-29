@@ -14,7 +14,7 @@ export default function Download() {
     goals.map((item, index) => {
       if (index === 0) {
         newimgs.push({
-          uri: "/images/bg-sec.png",
+          uri: "/images/share.png",
           x: 50,
           y: 55,
           sw: 400,
@@ -23,8 +23,8 @@ export default function Download() {
 
         newimgs.push({
           uri: item.link,
-          x: 135,
-          y: 160,
+          x: 125,
+          y: 180,
           sw: 120,
           sh: 120,
         });
@@ -33,8 +33,8 @@ export default function Download() {
       if (index === 1) {
         newimgs.push({
           uri: item.link,
-          x: 265,
-          y: 160,
+          x: 255,
+          y: 180,
           sw: 120,
           sh: 120,
         });
@@ -44,7 +44,7 @@ export default function Download() {
         newimgs.push({
           uri: item.link,
           x: 55,
-          y: 290,
+          y: 310,
           sw: 120,
           sh: 120,
         });
@@ -54,7 +54,7 @@ export default function Download() {
         newimgs.push({
           uri: item.link,
           x: 200,
-          y: 290,
+          y: 310,
           sw: 120,
           sh: 120,
         });
@@ -64,14 +64,14 @@ export default function Download() {
         newimgs.push({
           uri: item.link,
           x: 345,
-          y: 290,
+          y: 310,
           sw: 120,
           sh: 120,
         });
 
         newimgs.push({
           uri: "/images/logo.jpg",
-          x: 150,
+          x: 130,
           y: 120,
           sw: 80,
           sh: 30,
@@ -110,10 +110,12 @@ export default function Download() {
     };
 
     newimgs.forEach(depict);
+    ctx.fillStyle = "red";
+    ctx.fillRect(0, 0, 500, 500);
     setTimeout(() => {
       ctx.font = "14px Futura";
       ctx.fillStyle = "red";
-      ctx.fillText("MY VISION BOARD", 240, 140);
+      ctx.fillText("MY VISION BOARD", 220, 140);
       ctx.font = "12px Futura";
       ctx.fillStyle = "white";
       ctx.fillText(`We wish you all the best, ${name}`, 260, 450);
