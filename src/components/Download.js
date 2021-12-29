@@ -9,6 +9,7 @@ export default function Download() {
     return () => {};
   }, []);
   useEffect(() => {
+    const name = localStorage.getItem("visionName");
     const goals = JSON.parse(localStorage.getItem("vision"));
     goals.map((item, index) => {
       if (index === 0) {
@@ -115,7 +116,7 @@ export default function Download() {
       ctx.fillText("MY VISION BOARD", 240, 140);
       ctx.font = "12px Futura";
       ctx.fillStyle = "white";
-      ctx.fillText("We wish you all the best, JOSHUA ADESANYA", 260, 450);
+      ctx.fillText(`We wish you all the best, ${name}`, 260, 450);
     }, 2000);
 
     return () => {};

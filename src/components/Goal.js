@@ -109,6 +109,7 @@ export default function Goal() {
               marginRight: "auto",
               marginTop: "50px",
               width: "250px",
+              cursor: "pointer",
             }}
             className="boardLink"
             onClick={() => {
