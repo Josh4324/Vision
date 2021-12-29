@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { NotificationManager } from "react-notifications";
 
 export default function Education(props) {
@@ -21,7 +21,12 @@ export default function Education(props) {
   return (
     <div>
       <main style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
-        <div className="boxe">Education</div>
+        <div className="boxe">
+          <Link to="/board" style={{ textDecoration: "none", color: "white" }}>
+            <i style={{ paddingRight: "10px" }} class="fas fa-arrow-left"></i>
+          </Link>{" "}
+          Education
+        </div>
 
         <section
           style={{

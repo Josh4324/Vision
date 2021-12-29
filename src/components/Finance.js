@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { NotificationManager } from "react-notifications";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Finance(props) {
   useEffect(() => {
@@ -21,7 +21,13 @@ export default function Finance(props) {
   return (
     <div>
       <main style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
-        <div className="box">Finance</div>
+        <div className="box">
+          {" "}
+          <Link to="/board" style={{ textDecoration: "none", color: "white" }}>
+            <i style={{ paddingRight: "10px" }} class="fas fa-arrow-left"></i>
+          </Link>{" "}
+          Finance
+        </div>
 
         <section
           style={{

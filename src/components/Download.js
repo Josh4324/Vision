@@ -4,6 +4,8 @@ import Header from "./Header";
 
 export default function Download() {
   let newimgs = [];
+  let newtext = [];
+  const rimag = "";
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
@@ -28,6 +30,14 @@ export default function Download() {
           sw: 120,
           sh: 120,
         });
+
+        newtext.push({
+          text: item.name,
+          x: 125,
+          y: 280,
+          xt: 130,
+          yt: 293,
+        });
       }
 
       if (index === 1) {
@@ -37,6 +47,14 @@ export default function Download() {
           y: 180,
           sw: 120,
           sh: 120,
+        });
+
+        newtext.push({
+          text: item.name,
+          x: 255,
+          y: 280,
+          xt: 270,
+          yt: 293,
         });
       }
 
@@ -48,6 +66,14 @@ export default function Download() {
           sw: 120,
           sh: 120,
         });
+
+        newtext.push({
+          text: item.name,
+          x: 55,
+          y: 410,
+          xt: 60,
+          yt: 423,
+        });
       }
 
       if (index === 3) {
@@ -57,6 +83,14 @@ export default function Download() {
           y: 310,
           sw: 120,
           sh: 120,
+        });
+
+        newtext.push({
+          text: item.name,
+          x: 200,
+          y: 410,
+          xt: 210,
+          yt: 425,
         });
       }
 
@@ -69,16 +103,24 @@ export default function Download() {
           sh: 120,
         });
 
+        newtext.push({
+          text: item.name,
+          x: 345,
+          y: 410,
+          xt: 350,
+          yt: 423,
+        });
+
         newimgs.push({
           uri: "/images/logo.jpg",
           x: 130,
           y: 120,
-          sw: 80,
-          sh: 30,
+          sw: 60,
+          sh: 40,
         });
       }
     });
-    console.log(newimgs);
+
     const getContext = () => document.getElementById("canvas").getContext("2d");
     const ctx = document.getElementById("canvas").getContext("2d");
 
@@ -115,11 +157,21 @@ export default function Download() {
     setTimeout(() => {
       ctx.font = "14px Futura";
       ctx.fillStyle = "red";
-      ctx.fillText("MY VISION BOARD", 220, 140);
+      ctx.fillText("MY VISION BOARD", 200, 145);
       ctx.font = "12px Futura";
       ctx.fillStyle = "white";
       ctx.fillText(`We wish you all the best, ${name}`, 260, 450);
     }, 2000);
+
+    setTimeout(() => {
+      newtext.map((item) => {
+        ctx.fillStyle = "black";
+        ctx.fillRect(item.x, item.y, 120, 20);
+        ctx.fillStyle = "white";
+        ctx.font = "10px Futura";
+        ctx.fillText(item.text, item.xt, item.yt);
+      });
+    }, 1000);
 
     return () => {};
   }, []);
@@ -134,52 +186,6 @@ export default function Download() {
     a.click();
   };
 
-  const imgs = [
-    {
-      uri: "/images/bg-sec.png",
-      x: 50,
-      y: 55,
-      sw: 400,
-      sh: 400,
-    },
-    {
-      uri: "/images/Learn a new skill.jpg",
-      x: 135,
-      y: 160,
-      sw: 120,
-      sh: 120,
-    },
-    {
-      uri: "/images/Learn a new skill.jpg",
-      x: 265,
-      y: 160,
-      sw: 120,
-      sh: 120,
-    },
-
-    {
-      uri: "/images/Learn a new skill.jpg",
-      x: 55,
-      y: 290,
-      sw: 120,
-      sh: 120,
-    },
-    {
-      uri: "/images/Learn a new skill.jpg",
-      x: 200,
-      y: 290,
-      sw: 120,
-      sh: 120,
-    },
-    {
-      uri: "/images/Get a degree.jpg",
-      x: 345,
-      y: 290,
-      sw: 120,
-      sh: 120,
-    },
-  ];
-
   return (
     <div style={{ backgroundColor: "red" }}>
       <Header />
@@ -190,18 +196,54 @@ export default function Download() {
         height="500px"
         id="canvas"
       />
-      <button
+
+      <div
+        class="share-button text-center mt-4 d-flex"
         style={{
-          textAlign: "center",
-          display: "block",
+          display: "flex",
           width: "200px",
-          marginLeft: "auto",
           marginRight: "auto",
+          marginLeft: "auto",
+          justifyContent: "space-between",
         }}
-        onClick={download}
       >
-        DOWNLOAD
-      </button>
+        <div className="share-text mt-3 mb-1" style={{ color: "white" }}>
+          Share
+        </div>
+        <a
+          target="_blank"
+          style={{ color: "white" }}
+          rel="noopener noreferrer"
+          className="share-button mr-3"
+          href={`https://www.facebook.com/sharer.php?u=${rimag}`}
+        >
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a
+          target="_blank"
+          style={{ color: "white" }}
+          rel="noopener noreferrer"
+          className="share-button mr-3"
+          href={`https://twitter.com/share?text=I just checked generated my spec meme. You can generate yours at at https://meme.checkspecstatus.com, check it out - ${rimag}`}
+        >
+          <i class="fab fa-twitter-square"></i>
+        </a>
+        <button
+          style={{
+            backgroundColor: "yellow",
+            display: "block",
+            borderRadius: "10px",
+            border: "none",
+            paddingLeft: "5px",
+            paddingRight: "5px",
+            color: "red",
+            fontWeight: "bold",
+          }}
+          onClick={download}
+        >
+          DOWNLOAD
+        </button>
+      </div>
 
       <Footer style={{ marginTop: "900px" }} />
     </div>

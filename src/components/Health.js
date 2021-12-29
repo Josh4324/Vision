@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { NotificationManager } from "react-notifications";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Health(props) {
   useEffect(() => {
@@ -21,7 +21,13 @@ export default function Health(props) {
   return (
     <div>
       <main style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
-        <div className="boxh">Health</div>
+        <div className="boxh">
+          {" "}
+          <Link to="/board" style={{ textDecoration: "none", color: "white" }}>
+            <i style={{ paddingRight: "10px" }} class="fas fa-arrow-left"></i>
+          </Link>{" "}
+          Health
+        </div>
 
         <section
           style={{
@@ -33,11 +39,7 @@ export default function Health(props) {
         >
           <div
             onClick={() => {
-              addNewGoal(
-                "Maintain a healthy Body Mass Index (BMI)",
-                "box21",
-                "images/bmi.jpg"
-              );
+              addNewGoal("Healthy Body Mass Index", "box21", "images/bmi.jpg");
             }}
             className="box21 boxtext1"
           >
