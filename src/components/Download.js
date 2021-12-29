@@ -178,7 +178,7 @@ export default function Download() {
   ];
 
   return (
-    <div style={{ backgroundColor: "red", height: "100vh" }}>
+    <div style={{ backgroundColor: "red" }}>
       <Header />
 
       <canvas
@@ -187,9 +187,20 @@ export default function Download() {
         height="500px"
         id="canvas"
       />
-      <button onClick={download}>DOWNLOAD</button>
+      <button
+        style={{
+          textAlign: "center",
+          display: "block",
+          width: "200px",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+        onClick={download}
+      >
+        DOWNLOAD
+      </button>
 
-      <Footer />
+      <Footer style={{ marginTop: "900px" }} />
     </div>
   );
 }

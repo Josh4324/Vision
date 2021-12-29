@@ -20,7 +20,7 @@ export default function Home() {
   const removeVideo = (evt) => {
     console.log("checking");
     console.log(evt.target.tagName);
-    if (evt.target.tagName === "DIV") {
+    if (evt.target.tagName !== "SPAN") {
       videoRef.current.pause();
       videoRef.current.classList.toggle("none");
     }

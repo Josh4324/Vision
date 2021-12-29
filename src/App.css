@@ -512,15 +512,16 @@ input:focus-visible {
     left: 240px;
     top: -120px;
   }
+
+  #canvas {
+    width: 300px !important;
+  }
 }
 
 #canvas {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  display: block;
+  width: 500px;
+  margin: auto 0;
   background-color: red;
 }
 
