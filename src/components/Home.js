@@ -4,6 +4,13 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  const goals = JSON.parse(localStorage.getItem("vision"));
+  let linkurl;
+  if (goals !== null && goals.length === 5) {
+    linkurl = "/goals";
+  } else {
+    linkurl = "/board";
+  }
   const videoRef = useRef("");
   const homeRef = useRef("");
   const modalRef = useRef("");
@@ -172,7 +179,7 @@ export default function Home() {
             marginTop: "50px",
             width: "250px",
           }}
-          to="/board"
+          to={linkurl}
           className="boardLink"
         >
           CREATE YOUR VISION BOARD
