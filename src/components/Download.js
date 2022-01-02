@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
+import { NotificationManager } from "react-notifications";
+import axios from "axios";
 
 export default function Download() {
+  const [pic, setPic] = useState("");
   let newimgs = [];
   let newtext = [];
-  const rimag = "";
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
@@ -175,6 +177,31 @@ export default function Download() {
       });
     }, 1000);
 
+    setTimeout(async () => {
+      const canvas = document.getElementById("canvas");
+      const dataURL = canvas.toDataURL("image/jpeg", 1.0);
+      let formData = new FormData();
+      let email = localStorage.getItem("visionEmail");
+      formData.append("image", dataURL);
+      formData.append("email", email);
+      try {
+        const res = await axios.patch(
+          `http://64.227.39.25/api/v1/user/image`,
+          formData
+        );
+        if (res) {
+          const res = await axios.get(
+            `http://64.227.39.25/api/v1/user?email=${email}`,
+            formData
+          );
+          setPic(res.data.data.image);
+        }
+      } catch (err) {
+        NotificationManager.error("An error occured", "Error");
+        return err.response;
+      }
+    }, 2500);
+
     return () => {};
   }, []);
 
@@ -217,7 +244,7 @@ export default function Download() {
           style={{ color: "white" }}
           rel="noopener noreferrer"
           className="share-button mr-3"
-          href={`https://www.facebook.com/sharer.php?u=${rimag}`}
+          href={`https://www.facebook.com/sharer.php?u=${pic}`}
         >
           <i class="fab fa-facebook-square"></i>
         </a>
@@ -226,7 +253,7 @@ export default function Download() {
           style={{ color: "white" }}
           rel="noopener noreferrer"
           className="share-button mr-3"
-          href={`https://twitter.com/share?text=I just checked generated my vision board. You can generate yours at at https://danovisionboard.com, check it out - ${rimag}`}
+          href={`https://twitter.com/share?text=I just checked generated my vision board. You can generate yours at at https://danovisionboard.com, check it out - ${pic}`}
         >
           <i class="fab fa-twitter-square"></i>
         </a>

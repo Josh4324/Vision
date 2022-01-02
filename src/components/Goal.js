@@ -4,9 +4,9 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { NotificationManager } from "react-notifications";
+import axios from "axios";
 
 export default function Goal() {
-  const sendGoals = () => {};
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
@@ -158,7 +158,7 @@ export default function Goal() {
             </div>
 
             <span
-              onClick={() => {
+              onClick={async () => {
                 if (
                   nameRef.current.value === "" ||
                   emailRef.current.value === ""
@@ -169,7 +169,24 @@ export default function Goal() {
                   );
                 } else {
                   localStorage.setItem("visionName", nameRef.current.value);
-                  navigate("/download");
+                  localStorage.setItem("visionEmail", emailRef.current.value);
+                  const cred = {
+                    name: nameRef.current.value,
+                    email: emailRef.current.value,
+                    goal: localStorage.getItem("vision"),
+                  };
+
+                  try {
+                    const res = await axios.post(
+                      `http://64.227.39.25/api/v1/user/`,
+                      cred
+                    );
+                    navigate("/download");
+                    return res;
+                  } catch (err) {
+                    NotificationManager.error("An error occured", "Error");
+                    return err.response;
+                  }
                 }
               }}
               className="btn boardLink mt-20"
