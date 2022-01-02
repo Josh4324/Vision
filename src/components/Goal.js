@@ -131,7 +131,7 @@ export default function Goal() {
               />
             </div>
             <div style={{ display: "flex" }}>
-              <label>Emaill:</label>
+              <label>Email:</label>
               <input
                 ref={emailRef}
                 type="email"
