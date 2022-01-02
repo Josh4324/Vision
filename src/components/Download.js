@@ -119,6 +119,7 @@ export default function Download() {
           sh: 40,
         });
       }
+      return "";
     });
 
     const getContext = () => document.getElementById("canvas").getContext("2d");
@@ -170,6 +171,7 @@ export default function Download() {
         ctx.fillStyle = "white";
         ctx.font = "10px Futura";
         ctx.fillText(item.text, item.xt, item.yt);
+        return "";
       });
     }, 1000);
 
