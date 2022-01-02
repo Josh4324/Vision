@@ -26,7 +26,7 @@ export default function Category() {
     }
   };
   return (
-    <div style={{ backgroundColor: "red" }}>
+    <div className="app-wrapper">
       <Header />
       {category === "finance" ? (
         <Finance addGoal={addGoal} />

@@ -32,86 +32,39 @@ export default function Goal() {
   }, []);
   return (
     <div>
-      <div className={next === true ? "next" : "next1"}>
+      <div className={next === true ? "app-wrapper next" : "app-wrapper next1"}>
         <Header />
         <main>
-          <h3
-            style={{
-              textAlign: "center",
-              marginTop: "50px",
-              color: "white",
-              paddingBottom: "10px",
-              borderBottom: "2px solid white",
-              width: "200px",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          >
-            YOUR GOALS
-          </h3>
+          <h2 className="board-title">
+            <span>YOUR GOALS</span>
+          </h2>
 
-          <section
-            style={{
-              display: "flex",
-              width: "80%",
-              marginLeft: "auto",
-              marginRight: "auto",
-              flexWrap: "wrap",
-              justifyContent: "center",
-            }}
-          >
+          <section className="border-goal-section">
             {goals.map((item) => {
               return (
-                <div className={`boxtext ${item.image}`}>
+                <div className={`boxtext1 ${item.image}`}>
                   <i
                     onClick={() => {
                       removeGoal(item.name);
                     }}
                     class="fas fa-minus-circle new-minus"
                   ></i>
-                  {item.name}
+                  <span>{item.name}</span>
                 </div>
               );
             })}
             {goals.length >= 5 ? null : (
               <Link to="/board" className="link">
                 <div className="addGoal">
-                  <i
-                    class="fas fa-plus-circle"
-                    style={{
-                      fontSize: "100px",
-                      textAlign: "center",
-                      display: "block",
-                      paddingTop: "40%",
-                      boxSizing: "border-box",
-                      color: "red",
-                    }}
-                  ></i>
+                  <i class="addGoal__icon fas fa-plus-circle"></i>
                 </div>
               </Link>
             )}
           </section>
-
-          <span
-            style={{
-              textDecoration: "none",
-              backgroundColor: "yellow",
-              height: "30px",
-              paddingTop: "5px",
-              paddingLeft: "10px",
-              paddingRight: "10px",
-              color: "red",
-              borderRadius: "10px",
-              fontWeight: "bold",
-              textAlign: "center",
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
-              marginTop: "50px",
-              width: "250px",
-              cursor: "pointer",
-            }}
-            className="boardLink"
+          
+          <div class="text-center mt-50">
+            <span
+            className="btn boardLink"
             onClick={() => {
               setNext(true);
               window.scrollTo(0, 0);
@@ -119,6 +72,8 @@ export default function Goal() {
           >
             CONTINUE
           </span>
+          </div>
+          
         </main>
         <Footer />
       </div>
@@ -133,17 +88,18 @@ export default function Goal() {
             marginLeft: "auto",
             marginRight: "auto",
             backgroundColor: "white",
-            width: "400px",
+            padding: "50px 20px",
+            maxWidth: "450px",
           }}
         >
           <p
             style={{
-              color: "red",
+              color: "#cc0125",
               textAlign: "center",
               fontWeight: "bold",
               paddingBottom: "5px",
-              marginTop: "50px",
-              borderBottom: "2px solid red",
+              marginTop: "0px",
+              borderBottom: "2px solid #cc0125",
               width: "200px",
               marginLeft: "auto",
               marginRight: "auto",
@@ -158,7 +114,7 @@ export default function Goal() {
               marginRight: "auto",
               marginLeft: "auto",
               marginTop: "40px",
-              color: "red",
+              color: "#cc0125",
               textAlign: "center",
             }}
           >
@@ -168,26 +124,26 @@ export default function Goal() {
                 ref={nameRef}
                 style={{
                   border: "none",
-                  borderBottom: "1px solid red",
+                  borderBottom: "1px solid #cc0125",
                   marginBottom: "20px",
                   width: "100%",
                 }}
               />
             </div>
             <div style={{ display: "flex" }}>
-              <label>Emaill:</label>
+              <label>Email:</label>
               <input
                 ref={emailRef}
                 type="email"
                 style={{
                   border: "none",
-                  borderBottom: "1px solid red",
+                  borderBottom: "1px solid #cc0125",
                   width: "100%",
                 }}
               />
             </div>
 
-            <p>Would you like us to be your accountability partner?</p>
+            <p class="mb-10">Would you like us to be your accountability partner?</p>
 
             <div>
               <input
@@ -197,35 +153,10 @@ export default function Goal() {
                 value="GO FOR IT!"
               />
               <label for="vehicle1">GO FOR IT!</label>
-              <input
-                type="checkbox"
-                id="vehicle1"
-                name="vehicle1"
-                value="NOT SURE?"
-              />
-              <label for="vehicle1">NOT SURE?</label>
+              
             </div>
 
             <span
-              style={{
-                textDecoration: "none",
-                backgroundColor: "yellow",
-                height: "30px",
-                paddingTop: "5px",
-                paddingLeft: "10px",
-                paddingRight: "10px",
-                color: "red",
-                borderRadius: "10px",
-                fontWeight: "bold",
-                textAlign: "center",
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
-                marginTop: "50px",
-                marginBottom: "30px",
-                width: "250px",
-                cursor: "pointer",
-              }}
               onClick={() => {
                 if (
                   nameRef.current.value === "" ||
@@ -240,7 +171,7 @@ export default function Goal() {
                   navigate("/download");
                 }
               }}
-              className="boardLink"
+              className="btn boardLink mt-20"
             >
               EXPORT YOUR VISION
             </span>

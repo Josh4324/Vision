@@ -21,29 +21,22 @@ export default function Health(props) {
   return (
     <div>
       <main style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
-        <div className="boxh">
+        <div className="board-goals-title boxh">
           {" "}
-          <Link to="/board" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="/board" className="back-link">
             <i style={{ paddingRight: "10px" }} class="fas fa-arrow-left"></i>
           </Link>{" "}
-          Health
+          <span>Health</span>
         </div>
 
-        <section
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            marginTop: "30px",
-          }}
-        >
+        <section className="border-goal-section">
           <div
             onClick={() => {
               addNewGoal("Healthy Body Mass Index", "box21", "images/bmi.jpg");
             }}
             className="box21 boxtext1"
           >
-            Maintain a healthy Body Mass Index (BMI)
+            <span>Maintain a healthy Body Mass Index (BMI)</span>
           </div>
           <div
             onClick={() => {
@@ -55,7 +48,7 @@ export default function Health(props) {
             }}
             className="box22 boxtext1"
           >
-            Start working out
+            <span>Start working out</span>
           </div>
           <div
             onClick={() => {
@@ -67,7 +60,7 @@ export default function Health(props) {
             }}
             className="box23 boxtext1"
           >
-            Get health insurance
+            <span>Get health insurance</span>
           </div>
           <div
             onClick={() => {
@@ -79,7 +72,7 @@ export default function Health(props) {
             }}
             className="box24 boxtext1"
           >
-            Eat more fruits/healthy foods
+            <span>Eat more fruits/healthy foods</span>
           </div>
 
           <div
@@ -92,7 +85,7 @@ export default function Health(props) {
             }}
             className="box25 boxtext1"
           >
-            Drink more water
+            <span>Drink more water</span>
           </div>
         </section>
       </main>

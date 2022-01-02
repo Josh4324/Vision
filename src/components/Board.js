@@ -9,48 +9,28 @@ export default function Home() {
     return () => {};
   }, []);
   return (
-    <div style={{ backgroundColor: "red" }}>
+    <div className="app-wrapper">
       <Header />
       <main>
-        <h3
-          style={{
-            textAlign: "center",
-            marginTop: "50px",
-            color: "white",
-            paddingBottom: "10px",
-            borderBottom: "2px solid white",
-            width: "200px",
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        >
-          CHOOSE CATEGORY
-        </h3>
+        <h2 className="board-title">
+          <span>CHOOSE CATEGORY</span>
+        </h2>
 
-        <section
-          style={{
-            display: "flex",
-            width: "80%",
-            marginLeft: "auto",
-            marginRight: "auto",
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
+        <section className="board-main-section">
           <Link className="link" to="/category/finance">
-            <div className="box1 boxtext">Finance</div>
+            <div className="box1 boxtext"><span>Finance</span></div>
           </Link>
           <Link className="link" to="/category/health">
-            <div className="box2 boxtext">Health</div>
+            <div className="box2 boxtext"><span>Health</span></div>
           </Link>
           <Link className="link" to="/category/education">
-            <div className="box3 boxtext">Education</div>
+            <div className="box3 boxtext"><span>Education</span></div>
           </Link>
           <Link className="link" to="/category/career">
-            <div className="box4 boxtext">Career</div>
+            <div className="box4 boxtext"><span>Career</span></div>
           </Link>
           <Link className="link" to="/category/family">
-            <div className="box5 boxtext">Family</div>
+            <div className="box5 boxtext"><span>Family</span></div>
           </Link>
         </section>
       </main>

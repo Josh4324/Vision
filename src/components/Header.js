@@ -11,43 +11,17 @@ export default function Header() {
   }
   return (
     <div>
-      <header
-        style={{
-          width: "80%",
-          marginLeft: "auto",
-          marginRight: "auto",
-          display: "flex",
-          justifyContent: "space-between",
-          paddingTop: "30px",
-        }}
-      >
-        <div style={{ display: "flex" }}>
-          <Link to="/">
+      <header className="header-main">
+        <div className="logo-section">
+          <Link className="logo-section__link" to="/">
             {" "}
-            <img style={{ width: "50px" }} src="/images/logo.png" alt="logo" />
+            <img className="logo-section__image" src="/images/logo.png" alt="logo" />
+            <span className="logo-section__text">MY VISION BOARD</span>
           </Link>
 
-          <Link className="link" to="/">
-            <div
-              style={{ paddingLeft: "10px", marginTop: "10px", color: "white" }}
-            >
-              MY VISION BOARD
-            </div>
-          </Link>
         </div>
         <Link
-          className="boardLink boardnone"
-          style={{
-            textDecoration: "none",
-            backgroundColor: "yellow",
-            height: "25px",
-            paddingTop: "4px",
-            paddingLeft: "10px",
-            paddingRight: "10px",
-            color: "red",
-            borderRadius: "10px",
-            fontWeight: "bold",
-          }}
+          className="header-button btn boardLink boardnone"
           to={linkurl}
         >
           CREATE YOUR VISION BOARD

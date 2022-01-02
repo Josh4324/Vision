@@ -21,21 +21,14 @@ export default function Career(props) {
   return (
     <div>
       <main style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
-        <div className="box">
-          <Link to="/board" style={{ textDecoration: "none", color: "white" }}>
+        <div className="board-goals-title box">
+        <Link to="/board" className="back-link">
             <i style={{ paddingRight: "10px" }} class="fas fa-arrow-left"></i>
           </Link>{" "}
-          Career
+          <span>Career</span>
         </div>
 
-        <section
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            marginTop: "30px",
-          }}
-        >
+        <section className="border-goal-section">
           <div
             onClick={() => {
               addNewGoal(
@@ -46,7 +39,7 @@ export default function Career(props) {
             }}
             className="box41 boxtext1"
           >
-            Get a job/new job
+            <span>Get a job/new job</span>
           </div>
           <div
             onClick={() => {
@@ -58,7 +51,7 @@ export default function Career(props) {
             }}
             className="box42 boxtext1"
           >
-            Learn a new skill
+            <span>Learn a new skill</span>
           </div>
           <div
             onClick={() => {
@@ -70,7 +63,7 @@ export default function Career(props) {
             }}
             className="box43 boxtext1"
           >
-            Go for an audition
+            <span>Go for an audition</span>
           </div>
           <div
             onClick={() => {
@@ -82,7 +75,7 @@ export default function Career(props) {
             }}
             className="box44 boxtext1"
           >
-            Learn a new language
+            <span>Learn a new language</span>
           </div>
 
           <div
@@ -95,7 +88,7 @@ export default function Career(props) {
             }}
             className="box45 boxtext1"
           >
-            Get a professional certificate
+            <span>Get a professional certificate</span>
           </div>
         </section>
       </main>

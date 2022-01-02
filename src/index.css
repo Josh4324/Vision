@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Houschka_Rounded';
+  src: url('./fonts/Houschka/Houschka-rounded-alt-medium.eot?#iefix') format('embedded-opentype'), url('./fonts/Houschka/Houschka-rounded-alt-medium.woff') format('woff'), url('./fonts/Houschka/Houschka-rounded-alt-medium.svg#svghouschka-rounded-alt-medium') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Houschka_Rounded';
+  src: url('./fonts/Houschka/Houschka-rounded-alt-demi-bold.eot?#iefix') format('embedded-opentype'), url('./fonts/Houschka/Houschka-rounded-alt-demi-bold.woff') format('woff'), url('./fonts/Houschka/Houschka-rounded-alt-demi-bold.svg#svghouschka-rounded-alt-demi-bold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Houschka_Rounded';
+  src: url('./fonts/Houschka/Houschka-rounded-alt-bold.eot?#iefix') format('embedded-opentype'), url('./fonts/Houschka/Houschka-rounded-alt-bold.woff') format('woff'), url('./fonts/Houschka/Houschka-rounded-alt-bold.svg#svghouschka-rounded-alt-bold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothamRoundedBook';
+  src: url('./fonts/Gotham/GothamRounded-Book.eot');
+  src: url('./fonts/Gotham/GothamRounded-Book.eot?#iefix') format('embedded-opentype'), url('./fonts/Gotham/GothamRounded-Book.woff2') format('woff2'), url('./fonts/Gotham/GothamRounded-Book.woff') format('woff'), url('./fonts/Gotham/GothamRounded-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

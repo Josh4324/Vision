@@ -21,29 +21,22 @@ export default function Finance(props) {
   return (
     <div>
       <main style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
-        <div className="box">
+        <div className="board-goals-title box">
           {" "}
-          <Link to="/board" style={{ textDecoration: "none", color: "white" }}>
-            <i style={{ paddingRight: "10px" }} class="fas fa-arrow-left"></i>
+          <Link to="/board" className="back-link">
+            <i class="fas fa-arrow-left"></i>
           </Link>{" "}
-          Finance
+          <span>Finance</span>
         </div>
 
-        <section
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            marginTop: "30px",
-          }}
-        >
+        <section className="border-goal-section">
           <div
             onClick={() => {
               addNewGoal(" Save More Money", "box11", "images/smm4.jpg");
             }}
             className="box11 boxtext1"
           >
-            Save More Money
+            <span>Save More Money</span> 
           </div>
 
           <div
@@ -56,7 +49,7 @@ export default function Finance(props) {
             }}
             className="box12 boxtext1"
           >
-            Start a business/side hustle
+            <span>Start a business/side hustle</span>
           </div>
 
           <div
@@ -69,7 +62,7 @@ export default function Finance(props) {
             }}
             className="box13 boxtext1"
           >
-            Have a monthly budget
+            <span>Have a monthly budget</span>
           </div>
 
           <div
@@ -78,7 +71,7 @@ export default function Finance(props) {
             }}
             className="box14 boxtext1"
           >
-            Invest more
+            <span>Invest more</span>
           </div>
 
           <div
@@ -91,7 +84,7 @@ export default function Finance(props) {
             }}
             className="box15 boxtext1"
           >
-            Read finance books/blogs
+            <span>Read finance books/blogs</span>
           </div>
         </section>
       </main>
