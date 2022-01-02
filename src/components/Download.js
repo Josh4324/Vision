@@ -186,12 +186,12 @@ export default function Download() {
       formData.append("email", email);
       try {
         const res = await axios.patch(
-          `http://64.227.39.25/api/v1/user/image`,
+          `https://danovisionboard.com/api/v1/user/image`,
           formData
         );
         if (res) {
           const res = await axios.get(
-            `http://64.227.39.25/api/v1/user?email=${email}`,
+            `https://danovisionboard.com/api/v1/user?email=${email}`,
             formData
           );
           setPic(res.data.data.image);
