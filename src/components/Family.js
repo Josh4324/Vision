@@ -21,22 +21,15 @@ export default function Family(props) {
   return (
     <div>
       <main style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
-        <div className="boxf">
+        <div className="board-goals-title boxf">
           {" "}
-          <Link to="/board" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="/board" className="back-link">
             <i style={{ paddingRight: "10px" }} class="fas fa-arrow-left"></i>
           </Link>{" "}
-          Family
+          <span>Family</span>
         </div>
 
-        <section
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            marginTop: "30px",
-          }}
-        >
+        <section className="border-goal-section">
           <div
             onClick={() => {
               addNewGoal(
@@ -47,7 +40,7 @@ export default function Family(props) {
             }}
             className="box51 boxtext1"
           >
-            Go on a vacation
+            <span>Go on a vacation</span>
           </div>
 
           <div
@@ -60,7 +53,7 @@ export default function Family(props) {
             }}
             className="box52 boxtext1"
           >
-            Get into a relationship
+            <span>Get into a relationship</span>
           </div>
 
           <div
@@ -73,7 +66,7 @@ export default function Family(props) {
             }}
             className="box53 boxtext1"
           >
-            Buy a house/car
+            <span>Buy a house/car</span>
           </div>
 
           <div
@@ -82,7 +75,7 @@ export default function Family(props) {
             }}
             className="box54 boxtext1"
           >
-            Make more friends
+            <span>Make more friends</span>
           </div>
 
           <div
@@ -95,7 +88,7 @@ export default function Family(props) {
             }}
             className="box55 boxtext1"
           >
-            Find/Develop my talent
+            <span>Find/Develop my talent</span>
           </div>
         </section>
       </main>

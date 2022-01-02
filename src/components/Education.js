@@ -21,28 +21,21 @@ export default function Education(props) {
   return (
     <div>
       <main style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
-        <div className="boxe">
-          <Link to="/board" style={{ textDecoration: "none", color: "white" }}>
+        <div className="board-goals-title boxe">
+          <Link to="/board" className="back-link">
             <i style={{ paddingRight: "10px" }} class="fas fa-arrow-left"></i>
           </Link>{" "}
-          Education
+          <span>Education</span>
         </div>
 
-        <section
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            marginTop: "30px",
-          }}
-        >
+        <section className="border-goal-section">
           <div
             onClick={() => {
               addNewGoal("Get a degree", "box31", "images/Get a degree.jpg");
             }}
             className="box31 boxtext1"
           >
-            Get a degree
+            <span>Get a degree</span>
           </div>
           <div
             onClick={() => {
@@ -54,7 +47,7 @@ export default function Education(props) {
             }}
             className="box32 boxtext1"
           >
-            Improve my grades
+            <span>Improve my grades</span>
           </div>
           <div
             onClick={() => {
@@ -66,7 +59,7 @@ export default function Education(props) {
             }}
             className="box33 boxtext1"
           >
-            Read more books
+            <span>Read more books</span>
           </div>
           <div
             onClick={() => {
@@ -78,7 +71,7 @@ export default function Education(props) {
             }}
             className="box34 boxtext1"
           >
-            Get a scholarship
+            <span>Get a scholarship</span>
           </div>
 
           <div
@@ -91,7 +84,7 @@ export default function Education(props) {
             }}
             className="box35 boxtext1"
           >
-            Complete a training course
+            <span>Complete a training course</span>
           </div>
         </section>
       </main>

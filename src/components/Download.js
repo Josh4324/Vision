@@ -152,11 +152,11 @@ export default function Download() {
     };
 
     newimgs.forEach(depict);
-    ctx.fillStyle = "red";
+    ctx.fillStyle = "#cc0125";
     ctx.fillRect(0, 0, 500, 500);
     setTimeout(() => {
       ctx.font = "14px Futura";
-      ctx.fillStyle = "red";
+      ctx.fillStyle = "#cc0125";
       ctx.fillText("MY VISION BOARD", 200, 150);
       ctx.font = "12px Futura";
       ctx.fillStyle = "white";
@@ -187,7 +187,7 @@ export default function Download() {
   };
 
   return (
-    <div style={{ backgroundColor: "red" }}>
+    <div className="app-wrapper">
       <Header />
 
       <canvas
@@ -224,7 +224,7 @@ export default function Download() {
           style={{ color: "white" }}
           rel="noopener noreferrer"
           className="share-button mr-3"
-          href={`https://twitter.com/share?text=I just checked generated my spec meme. You can generate yours at at https://meme.checkspecstatus.com, check it out - ${rimag}`}
+          href={`https://twitter.com/share?text=I just checked generated my vision board. You can generate yours at at https://danovisionboard.com, check it out - ${rimag}`}
         >
           <i class="fab fa-twitter-square"></i>
         </a>
@@ -236,7 +236,7 @@ export default function Download() {
             border: "none",
             paddingLeft: "5px",
             paddingRight: "5px",
-            color: "red",
+            color: "#cc0125",
             fontWeight: "bold",
           }}
           onClick={download}

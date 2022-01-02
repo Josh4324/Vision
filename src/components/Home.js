@@ -32,158 +32,56 @@ export default function Home() {
     videoRef.current.classList.toggle("none");
   };
   return (
-    <div className="pop">
+    <div className="app-wrapper">
       <div ref={modalRef} onClick={removeVideo} className=""></div>
       <Header />
       <main>
-        <div
-          className="banner"
-          style={{
-            width: "80%",
-            height: "400px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginTop: "50px",
-            backgroundColor: "black",
-            color: "white",
-            fontWeight: "bold",
-            fontSize: "20px",
-          }}
-        >
-          <div
-            style={{
-              width: "80%",
-              marginLeft: "auto",
-              marginRight: "auto",
-              textAlign: "center",
-              paddingTop: "60px",
-            }}
-          >
-            <div style={{ lineHeight: "2em" }}>
-              Vision Board helps you visualize your goals.
-            </div>
-            <div style={{ lineHeight: "2em" }}>To achieve it, you have to</div>
-            <div style={{ lineHeight: "2em" }}>GO FOR IT!</div>
+        <div className="banner">
+          <div className="banner__text">
+            <h1>Vision Board helps you visualize your goals.</h1>
+            <h1>To achieve it, you have to</h1>
+            <h1>GO FOR IT!</h1>
 
-            <span onClick={playVideo} className="boardLink1">
+            <span onClick={playVideo} className="banner_btn btn btn--red btn--lg mt-20">
               WATCH VIDEO
             </span>
           </div>
         </div>
 
-        <h3
-          style={{
-            textAlign: "center",
-            marginTop: "60px",
-            fontSize: "24px",
-            color: "white",
-          }}
-        >
-          Why do you need a vision board?
-        </h3>
+        <h2 className="milk-header">
+          <span>Why do you need a Vision Board?</span>
+        </h2>
 
-        <div className="imgBlockList">
-          <div className="imgBlock">
-            <span
-              style={{
-                display: "block",
-                marginTop: "50px",
-                marginLeft: "170px",
-                color: "red",
-                fontSize: "bold",
-              }}
-            >
-              1.
-            </span>
-            <div
-              style={{
-                width: "150px",
-                marginLeft: "auto",
-                marginRight: "auto",
-                marginTop: "30px",
-                color: "red",
-                fontSize: "bold",
-              }}
-            >
+        <div className="milk-drop-wrapper">
+          <div className="milk-drop">
+          <span className="milk-drop__header">1.</span>
+            <div className="milk-drop__body">
               Writing down your goals is powerful. it makes you think deeper
               about what you want
             </div>
           </div>
-          <div className="imgBlock">
-            <span
-              style={{
-                display: "block",
-                marginTop: "50px",
-                marginLeft: "170px",
-                color: "red",
-                fontSize: "bold",
-              }}
-            >
-              2.
-            </span>
-            <div
-              style={{
-                width: "150px",
-                marginLeft: "auto",
-                marginRight: "auto",
-                marginTop: "30px",
-                color: "red",
-                fontSize: "bold",
-              }}
-            >
+          <div className="milk-drop">
+            <span className="milk-drop__header">2.</span>
+            <div className="milk-drop__body">
               It helps you set realistic goals and measure your goals
             </div>
           </div>
-          <div className="imgBlock">
-            <span
-              style={{
-                display: "block",
-                marginTop: "50px",
-                marginLeft: "170px",
-                color: "red",
-                fontSize: "bold",
-              }}
-            >
-              3.
-            </span>
-            <div
-              style={{
-                width: "150px",
-                marginLeft: "auto",
-                marginRight: "auto",
-                marginTop: "30px",
-                color: "red",
-                fontSize: "bold",
-              }}
-            >
+          <div className="milk-drop">
+            <span className="milk-drop__header">3.</span>
+            <div className="milk-drop__body">
               It acts as your daily reminder and you can evaluate your actions
             </div>
           </div>
         </div>
 
+        <div className="text-center">
         <Link
-          style={{
-            textDecoration: "none",
-            backgroundColor: "yellow",
-            height: "25px",
-            paddingTop: "4px",
-            paddingLeft: "10px",
-            paddingRight: "10px",
-            color: "red",
-            borderRadius: "10px",
-            fontWeight: "bold",
-            textAlign: "center",
-            display: "block",
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginTop: "50px",
-            width: "250px",
-          }}
           to={linkurl}
-          className="boardLink"
+          className="btn mt-70 mx-auto"
         >
           CREATE YOUR VISION BOARD
         </Link>
+        </div>
 
         <video
           id="video"
