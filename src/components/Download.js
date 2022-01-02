@@ -118,13 +118,13 @@ export default function Download() {
           yt: 423,
         });
 
-        newimgs.push({
-          uri: "/images/logo_dano.jpg",
-          x: 130,
-          y: 120,
-          sw: 60,
-          sh: 40,
-        });
+        // newimgs.push({
+        //   uri: "/images/logo_dano.jpg",
+        //   x: 130,
+        //   y: 120,
+        //   sw: 60,
+        //   sh: 40,
+        // });
       }
     });
 
