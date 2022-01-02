@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { NotificationManager } from "react-notifications";
 
 export default function Goal() {
+  const sendGoals = () => {};
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
@@ -61,19 +62,18 @@ export default function Goal() {
               </Link>
             )}
           </section>
-          
+
           <div class="text-center mt-50">
             <span
-            className="btn boardLink"
-            onClick={() => {
-              setNext(true);
-              window.scrollTo(0, 0);
-            }}
-          >
-            CONTINUE
-          </span>
+              className="btn boardLink"
+              onClick={() => {
+                setNext(true);
+                window.scrollTo(0, 0);
+              }}
+            >
+              CONTINUE
+            </span>
           </div>
-          
         </main>
         <Footer />
       </div>
@@ -143,7 +143,9 @@ export default function Goal() {
               />
             </div>
 
-            <p class="mb-10">Would you like us to be your accountability partner?</p>
+            <p class="mb-10">
+              Would you like us to be your accountability partner?
+            </p>
 
             <div>
               <input
@@ -153,7 +155,6 @@ export default function Goal() {
                 value="GO FOR IT!"
               />
               <label for="vehicle1">GO FOR IT!</label>
-              
             </div>
 
             <span
