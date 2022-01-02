@@ -22,6 +22,13 @@ export default function Download() {
           sw: 400,
           sh: 400,
         });
+        newimgs.push({
+          uri: "/images/logo_danox70.jpg",
+          x: 130,
+          y: 120,
+          sw: 60,
+          sh: 40,
+        });
 
         newimgs.push({
           uri: item.link,
