@@ -89,7 +89,7 @@ export default function Goal() {
             marginRight: "auto",
             backgroundColor: "white",
             padding: "50px 20px",
-            width: "450px",
+            maxWidth: "450px",
           }}
         >
           <p
