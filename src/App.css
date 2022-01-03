@@ -1,4 +1,3 @@
-
 .App {
   text-align: center;
 }
@@ -532,6 +531,11 @@ input:focus-visible {
   #canvas {
     width: 300px !important;
   }
+
+  .close {
+    top: 150px !important;
+    right: 20% !important;
+  }
 }
 
 #canvas {
@@ -555,4 +559,14 @@ input:focus-visible {
 
 .none {
   display: none;
+}
+
+.close {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 38px;
+  z-index: 100;
+  right: 29%;
+  cursor: pointer;
 }

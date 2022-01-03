@@ -200,7 +200,7 @@ export default function Download() {
         NotificationManager.error("An error occured", "Error");
         return err.response;
       }
-    }, 2500);
+    }, 2000);
 
     return () => {};
   }, []);
@@ -236,27 +236,36 @@ export default function Download() {
           justifyContent: "space-between",
         }}
       >
-        <div className="share-text mt-3 mb-1" style={{ color: "white" }}>
-          Share
-        </div>
-        <a
-          target="_blank"
-          style={{ color: "white" }}
-          rel="noopener noreferrer"
-          className="share-button mr-3"
-          href={`https://www.facebook.com/sharer.php?u=${pic}`}
-        >
-          <i class="fab fa-facebook-square"></i>
-        </a>
-        <a
-          target="_blank"
-          style={{ color: "white" }}
-          rel="noopener noreferrer"
-          className="share-button mr-3"
-          href={`https://twitter.com/share?text=I just checked generated my vision board. You can generate yours at at https://danovisionboard.com, check it out - ${pic}`}
-        >
-          <i class="fab fa-twitter-square"></i>
-        </a>
+        {pic.length > 0 ? (
+          <div className="share-text mt-3 mb-1" style={{ color: "white" }}>
+            Share
+          </div>
+        ) : null}
+
+        {pic.length > 0 ? (
+          <a
+            target="_blank"
+            style={{ color: "white" }}
+            rel="noopener noreferrer"
+            className="share-button mr-3"
+            href={`https://www.facebook.com/sharer.php?u=${pic}`}
+          >
+            <i class="fab fa-facebook-square"></i>
+          </a>
+        ) : null}
+
+        {pic.length > 0 ? (
+          <a
+            target="_blank"
+            style={{ color: "white" }}
+            rel="noopener noreferrer"
+            className="share-button mr-3"
+            href={`https://twitter.com/share?text=I just checked generated my vision board. You can generate yours at at https://danovisionboard.com, check it out - ${pic}`}
+          >
+            <i class="fab fa-twitter-square"></i>
+          </a>
+        ) : null}
+
         <button
           style={{
             backgroundColor: "yellow",
