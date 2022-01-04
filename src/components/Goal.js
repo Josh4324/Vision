@@ -159,6 +159,15 @@ export default function Goal() {
 
             <span
               onClick={async () => {
+                let regex =
+                  /^[\/\!#\$\%&'\*\+\-\=\?\^_`\{\|\}~A-Za-z0-9]+[\.-]?[\/\!#\$\%&'\*\+\-\=\?\^_`\{\|\}~A-Za-z0-9]*@\w+([\.-]?\w+)*(\.\w{2,40})+$/;
+                console.log(regex.test(emailRef.current.value));
+                if (regex.test(emailRef.current.value) === false) {
+                  return NotificationManager.error(
+                    "Please enter your email in the correct format",
+                    "Error"
+                  );
+                }
                 if (
                   nameRef.current.value === "" ||
                   emailRef.current.value === ""

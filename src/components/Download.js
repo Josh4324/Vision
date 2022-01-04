@@ -18,14 +18,6 @@ export default function Download() {
     goals.map((item, index) => {
       if (index === 0) {
         newimgs.push({
-          uri: "/images/share.png",
-          x: 50,
-          y: 55,
-          sw: 400,
-          sh: 400,
-        });
-
-        newimgs.push({
           uri: item.link,
           x: 125,
           y: 180,
@@ -153,10 +145,13 @@ export default function Download() {
         );
       });
     };
-
+    loadImage("/images/share.png").then((img) => {
+      ctx.drawImage(img, 50, 55, 400, 400);
+    });
     newimgs.forEach(depict);
     ctx.fillStyle = "#cc0125";
     ctx.fillRect(0, 0, 500, 500);
+
     setTimeout(() => {
       ctx.font = "14px Futura";
       ctx.fillStyle = "#cc0125";
