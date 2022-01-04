@@ -8,6 +8,7 @@ export default function Download() {
   const [pic, setPic] = useState("");
   let newimgs = [];
   let newtext = [];
+  let numbercheck = 0;
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
@@ -19,17 +20,17 @@ export default function Download() {
       if (index === 0) {
         newimgs.push({
           uri: item.link,
-          x: 125,
+          x: 100,
           y: 180,
-          sw: 120,
+          sw: 140,
           sh: 120,
         });
 
         newtext.push({
           text: item.name,
-          x: 125,
+          x: 100,
           y: 280,
-          xt: 130,
+          xt: 105,
           yt: 293,
         });
       }
@@ -39,7 +40,7 @@ export default function Download() {
           uri: item.link,
           x: 255,
           y: 180,
-          sw: 120,
+          sw: 140,
           sh: 120,
         });
 
@@ -47,7 +48,7 @@ export default function Download() {
           text: item.name,
           x: 255,
           y: 280,
-          xt: 270,
+          xt: 260,
           yt: 293,
         });
       }
@@ -57,7 +58,7 @@ export default function Download() {
           uri: item.link,
           x: 55,
           y: 310,
-          sw: 120,
+          sw: 140,
           sh: 120,
         });
 
@@ -75,7 +76,7 @@ export default function Download() {
           uri: item.link,
           x: 200,
           y: 310,
-          sw: 120,
+          sw: 140,
           sh: 120,
         });
 
@@ -93,7 +94,7 @@ export default function Download() {
           uri: item.link,
           x: 345,
           y: 310,
-          sw: 120,
+          sw: 140,
           sh: 120,
         });
 
@@ -117,7 +118,7 @@ export default function Download() {
     });
 
     const getContext = () => document.getElementById("canvas").getContext("2d");
-    const ctx = document.getElementById("canvas").getContext("2d");
+    const ctx = getContext();
 
     // It's better to use async image loading.
     const loadImage = (url) => {
@@ -135,6 +136,7 @@ export default function Download() {
       // And this is the key to this solution
       // Always remember to make a copy of original object, then it just works :)
       const myOptions = Object.assign({}, options);
+
       return loadImage(myOptions.uri).then((img) => {
         ctx.drawImage(
           img,
@@ -143,59 +145,64 @@ export default function Download() {
           myOptions.sw,
           myOptions.sh
         );
+        numbercheck = numbercheck + 1;
+        if (numbercheck === 6) {
+          console.log("done");
+          ctx.font = "14px Futura";
+          ctx.fillStyle = "#cc0125";
+          ctx.fillText("MY VISION BOARD", 200, 150);
+          ctx.font = "12px Futura";
+          ctx.fillStyle = "white";
+          ctx.fillText(`We wish you all the best, ${name}`, 260, 450);
+
+          newtext.map((item) => {
+            ctx.fillStyle = "black";
+            ctx.fillRect(item.x, item.y, 140, 20);
+            ctx.fillStyle = "white";
+            ctx.font = "10px Futura";
+            ctx.fillText(item.text, item.xt, item.yt);
+
+            setTimeout(async () => {
+              const canvas = document.getElementById("canvas");
+              const dataURL = canvas.toDataURL("image/jpeg", 1.0);
+              let formData = new FormData();
+              let email = localStorage.getItem("visionEmail");
+              formData.append("image", dataURL);
+              formData.append("email", email);
+              try {
+                const res = await axios.patch(
+                  `https://danovisionboard.com/api/v1/user/image`,
+                  formData
+                );
+                if (res) {
+                  const res = await axios.get(
+                    `https://danovisionboard.com/api/v1/user?email=${email}`,
+                    formData
+                  );
+                  setPic(res.data.data.image);
+                }
+              } catch (err) {
+                NotificationManager.error("An error occured", "Error");
+                return err.response;
+              }
+            }, 2000);
+          });
+        }
       });
     };
-    loadImage("/images/share.png").then((img) => {
-      ctx.drawImage(img, 50, 55, 400, 400);
-    });
-    newimgs.forEach(depict);
-    ctx.fillStyle = "#cc0125";
-    ctx.fillRect(0, 0, 500, 500);
 
-    setTimeout(() => {
-      ctx.font = "14px Futura";
+    const generateImage = () => {
       ctx.fillStyle = "#cc0125";
-      ctx.fillText("MY VISION BOARD", 200, 150);
-      ctx.font = "12px Futura";
-      ctx.fillStyle = "white";
-      ctx.fillText(`We wish you all the best, ${name}`, 260, 450);
-    }, 1000);
+      ctx.fillRect(0, 0, 500, 500);
 
-    setTimeout(() => {
-      newtext.map((item) => {
-        ctx.fillStyle = "black";
-        ctx.fillRect(item.x, item.y, 120, 20);
-        ctx.fillStyle = "white";
-        ctx.font = "10px Futura";
-        ctx.fillText(item.text, item.xt, item.yt);
-        return "";
+      loadImage("/images/share.png").then((img) => {
+        ctx.drawImage(img, 50, 55, 400, 400);
       });
-    }, 1000);
 
-    setTimeout(async () => {
-      const canvas = document.getElementById("canvas");
-      const dataURL = canvas.toDataURL("image/jpeg", 1.0);
-      let formData = new FormData();
-      let email = localStorage.getItem("visionEmail");
-      formData.append("image", dataURL);
-      formData.append("email", email);
-      try {
-        const res = await axios.patch(
-          `https://danovisionboard.com/api/v1/user/image`,
-          formData
-        );
-        if (res) {
-          const res = await axios.get(
-            `https://danovisionboard.com/api/v1/user?email=${email}`,
-            formData
-          );
-          setPic(res.data.data.image);
-        }
-      } catch (err) {
-        NotificationManager.error("An error occured", "Error");
-        return err.response;
-      }
-    }, 2000);
+      newimgs.forEach(depict);
+    };
+
+    generateImage();
 
     return () => {};
   }, []);
