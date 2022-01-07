@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.22fc14f6.css",
-    "main.js": "/static/js/main.69470cf2.js",
+    "main.css": "/static/css/main.09a3d972.css",
+    "main.js": "/static/js/main.1a1a82b6.js",
     "static/js/787.76303224.chunk.js": "/static/js/787.76303224.chunk.js",
-    "static/media/Houschka-rounded-alt-demi-bold.svg": "/static/media/Houschka-rounded-alt-demi-bold.b26f9a7e5b8c42e8bf0e.svg",
-    "static/media/Houschka-rounded-alt-medium.svg": "/static/media/Houschka-rounded-alt-medium.a7c209c299afbe54f1c4.svg",
-    "static/media/Houschka-rounded-alt-bold.svg": "/static/media/Houschka-rounded-alt-bold.f6c2c0ec4a98e1ade908.svg",
+    "static/media/Houschka-rounded-alt-demi-bold.svg": "/static/media/Houschka-rounded-alt-demi-bold.52828bb68c2ff3859b9d.svg",
+    "static/media/Houschka-rounded-alt-medium.svg": "/static/media/Houschka-rounded-alt-medium.670648f56d8bbe54b489.svg",
+    "static/media/Houschka-rounded-alt-bold.svg": "/static/media/Houschka-rounded-alt-bold.746e54129c17a0217156.svg",
     "static/media/Houschka-rounded-alt-medium.eot": "/static/media/Houschka-rounded-alt-medium.423d30efacbd294ab74a.eot",
     "static/media/Houschka-rounded-alt-demi-bold.eot": "/static/media/Houschka-rounded-alt-demi-bold.bf5968268dc4f38ea56e.eot",
     "static/media/Houschka-rounded-alt-bold.eot": "/static/media/Houschka-rounded-alt-bold.8c688a7109bd01ffaac8.eot",
@@ -20,6 +20,7 @@
     "static/media/GothamRounded-Book.ttf": "/static/media/GothamRounded-Book.2b1748f75c10c035890d.ttf",
     "static/media/Eat more fruitshealthy foods.jpg": "/static/media/Eat more fruitshealthy foods.92b818c2f2b4c01e0ef0.jpg",
     "static/media/Start working out.jpg": "/static/media/Start working out.3167a7dfa3cbfbc55e45.jpg",
+    "static/media/spa-and-wellness.jpg": "/static/media/spa-and-wellness.e94a2391040154ed7ab6.jpg",
     "static/media/health.jpg": "/static/media/health.43b48697cd45480b7078.jpg",
     "static/media/Get a professional certificate.jpg": "/static/media/Get a professional certificate.ed517490f3c163899e8c.jpg",
     "static/media/Have a monthly budget.jpg": "/static/media/Have a monthly budget.d03e17cb5c07be37d486.jpg",
@@ -37,7 +38,6 @@
     "static/media/Get a degree.jpg": "/static/media/Get a degree.8cae5fbda11e3da8cb8f.jpg",
     "static/media/Complete a training course.jpg": "/static/media/Complete a training course.c0b93ce2b1d4c0c91366.jpg",
     "static/media/Get into a relationship.jpg": "/static/media/Get into a relationship.7360b133a70c119c971c.jpg",
-    "static/media/Get health insurance.jpg": "/static/media/Get health insurance.95217d271411f56d8b17.jpg",
     "static/media/Get a jobnew job.jpg": "/static/media/Get a jobnew job.2c440451384105dc97fe.jpg",
     "static/media/Read more books.jpg": "/static/media/Read more books.b49c094a0b42e12342f0.jpg",
     "static/media/finance.jpg": "/static/media/finance.339c70adb8ca5603a47f.jpg",
@@ -52,12 +52,12 @@
     "static/media/notification.woff?s3g3t9": "/static/media/notification.c392cd33d9d9de730f9d.woff",
     "static/media/notification.ttf?s3g3t9": "/static/media/notification.c5d9251ea82e42f75381.ttf",
     "index.html": "/index.html",
-    "main.22fc14f6.css.map": "/static/css/main.22fc14f6.css.map",
-    "main.69470cf2.js.map": "/static/js/main.69470cf2.js.map",
+    "main.09a3d972.css.map": "/static/css/main.09a3d972.css.map",
+    "main.1a1a82b6.js.map": "/static/js/main.1a1a82b6.js.map",
     "787.76303224.chunk.js.map": "/static/js/787.76303224.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22fc14f6.css",
-    "static/js/main.69470cf2.js"
+    "static/css/main.09a3d972.css",
+    "static/js/main.1a1a82b6.js"
   ]
 }
