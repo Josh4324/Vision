@@ -244,7 +244,7 @@ span.boardLink1:hover {
   width: 400px;
   height: 400px;
   margin: 15px;
-  background-image: url(../public/images/Get\ health\ insurance.jpg);
+  background-image: url(../public/images/spa-and-wellness.jpg);
   background-repeat: no-repeat;
 }
 
@@ -529,7 +529,7 @@ input:focus-visible {
   }
 
   #canvas {
-    width: 300px !important;
+    width: 400px !important;
   }
 
   .close {

@@ -53,14 +53,14 @@ export default function Health(props) {
           <div
             onClick={() => {
               addNewGoal(
-                "Get health insurance",
+                "Invest in self-care",
                 "box23",
-                "images/Get health insurance.jpg"
+                "images/spa-and-wellness.jpg"
               );
             }}
             className="box23 boxtext1"
           >
-            <span>Get health insurance</span>
+            <span>Invest in Self-Care</span>
           </div>
           <div
             onClick={() => {
