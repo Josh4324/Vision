@@ -266,7 +266,9 @@ export default function Download() {
           >
             <i class="fab fa-twitter-square"></i>
           </a>
-        ) : null}
+        ) : (
+          <span style={{ color: "white" }}>loading....</span>
+        )}
 
         <button
           style={{
