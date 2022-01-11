@@ -161,32 +161,33 @@ export default function Download() {
             ctx.fillStyle = "white";
             ctx.font = "10px Futura";
             ctx.fillText(item.text, item.xt, item.yt);
+          });
 
-            setTimeout(async () => {
-              const canvas = document.getElementById("canvas");
-              const dataURL = canvas.toDataURL("image/jpeg", 1.0);
-              let formData = new FormData();
-              let email = localStorage.getItem("visionEmail");
-              formData.append("image", dataURL);
-              formData.append("email", email);
-              try {
-                const res = await axios.patch(
-                  `https://danovisionboard.com/api/v1/user/image`,
+          // eslint-disable-next-line no-unused-expressions
+          (async () => {
+            const canvas = document.getElementById("canvas");
+            const dataURL = canvas.toDataURL("image/jpeg", 1.0);
+            let formData = new FormData();
+            let email = localStorage.getItem("visionEmail");
+            formData.append("image", dataURL);
+            formData.append("email", email);
+            try {
+              const res = await axios.patch(
+                `https://danovisionboard.com/api/v1/user/image`,
+                formData
+              );
+              if (res) {
+                const res = await axios.get(
+                  `https://danovisionboard.com/api/v1/user?email=${email}`,
                   formData
                 );
-                if (res) {
-                  const res = await axios.get(
-                    `https://danovisionboard.com/api/v1/user?email=${email}`,
-                    formData
-                  );
-                  setPic(res.data.data.image);
-                }
-              } catch (err) {
-                NotificationManager.error("An error occured", "Error");
-                return err.response;
+                setPic(res.data.data.image);
               }
-            }, 2000);
-          });
+            } catch (err) {
+              NotificationManager.error("An error occured", "Error");
+              return err.response;
+            }
+          })();
         }
       });
     };
@@ -195,11 +196,13 @@ export default function Download() {
       ctx.fillStyle = "#cc0125";
       ctx.fillRect(0, 0, 500, 500);
 
-      loadImage("/images/share.png").then((img) => {
-        ctx.drawImage(img, 50, 55, 400, 400);
-      });
-
-      newimgs.forEach(depict);
+      loadImage("/images/share.png")
+        .then((img) => {
+          ctx.drawImage(img, 50, 55, 400, 400);
+        })
+        .then(() => {
+          newimgs.forEach(depict);
+        });
     };
 
     generateImage();
