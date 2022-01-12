@@ -16,6 +16,7 @@ export default function Download() {
   useEffect(() => {
     const name = localStorage.getItem("visionName");
     const goals = JSON.parse(localStorage.getItem("vision"));
+    const numlen = goals.length + 1;
     goals.map((item, index) => {
       if (index === 0) {
         newimgs.push({
@@ -36,6 +37,14 @@ export default function Download() {
       }
 
       if (index === 1) {
+        newimgs.push({
+          uri: "/images/logo_danox70.jpg",
+          x: 130,
+          y: 120,
+          sw: 60,
+          sh: 40,
+        });
+
         newimgs.push({
           uri: item.link,
           x: 255,
@@ -105,14 +114,6 @@ export default function Download() {
           xt: 350,
           yt: 423,
         });
-
-        newimgs.push({
-          uri: "/images/logo_danox70.jpg",
-          x: 130,
-          y: 120,
-          sw: 60,
-          sh: 40,
-        });
       }
       return "";
     });
@@ -146,7 +147,8 @@ export default function Download() {
           myOptions.sh
         );
         numbercheck = numbercheck + 1;
-        if (numbercheck === 6) {
+        if (numbercheck === numlen) {
+          console.log(numlen);
           console.log("done");
           ctx.font = "14px Futura";
           ctx.fillStyle = "#cc0125";
