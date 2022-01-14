@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1a9bf8b9.css",
-    "main.js": "/static/js/main.91245172.js",
+    "main.css": "/static/css/main.1766eb4d.css",
+    "main.js": "/static/js/main.5f1be492.js",
     "static/js/787.76303224.chunk.js": "/static/js/787.76303224.chunk.js",
     "static/media/Houschka-rounded-alt-demi-bold.svg": "/static/media/Houschka-rounded-alt-demi-bold.b26f9a7e5b8c42e8bf0e.svg",
     "static/media/Houschka-rounded-alt-medium.svg": "/static/media/Houschka-rounded-alt-medium.a7c209c299afbe54f1c4.svg",
@@ -16,6 +16,7 @@
     "static/media/page-bg-top.jpg": "/static/media/page-bg-top.bb50b02d354881fe651b.jpg",
     "static/media/Go on a vacation.jpg": "/static/media/Go on a vacation.2a7296bc44759f88aabd.jpg",
     "static/media/Learn a new skill.jpg": "/static/media/Learn a new skill.30ca62ee05dc5505190d.jpg",
+    "static/media/ARLASTRONG-Regular.ttf": "/static/media/ARLASTRONG-Regular.5eec9962aa0d86e7b770.ttf",
     "static/media/GothamRounded-Book.eot": "/static/media/GothamRounded-Book.86e36550cbba9a983787.eot",
     "static/media/GothamRounded-Book.ttf": "/static/media/GothamRounded-Book.2b1748f75c10c035890d.ttf",
     "static/media/Eat more fruitshealthy foods.jpg": "/static/media/Eat more fruitshealthy foods.92b818c2f2b4c01e0ef0.jpg",
@@ -25,6 +26,7 @@
     "static/media/Get a professional certificate.jpg": "/static/media/Get a professional certificate.ed517490f3c163899e8c.jpg",
     "static/media/Have a monthly budget.jpg": "/static/media/Have a monthly budget.d03e17cb5c07be37d486.jpg",
     "static/media/Get a scholarship.jpg": "/static/media/Get a scholarship.41c9bcce279840f8b694.jpg",
+    "static/media/ARLASTRONG-Regular.woff": "/static/media/ARLASTRONG-Regular.0e219e343c8a55b16d33.woff",
     "static/media/family.jpg": "/static/media/family.99ff5b6a8cf105a0660a.jpg",
     "static/media/education.jpg": "/static/media/education.ecb6f4cf7e646542a7c7.jpg",
     "static/media/FindDevelop my talent.jpg": "/static/media/FindDevelop my talent.162ba20bb9dd39b42a3b.jpg",
@@ -52,12 +54,12 @@
     "static/media/notification.woff?s3g3t9": "/static/media/notification.c392cd33d9d9de730f9d.woff",
     "static/media/notification.ttf?s3g3t9": "/static/media/notification.c5d9251ea82e42f75381.ttf",
     "index.html": "/index.html",
-    "main.1a9bf8b9.css.map": "/static/css/main.1a9bf8b9.css.map",
-    "main.91245172.js.map": "/static/js/main.91245172.js.map",
+    "main.1766eb4d.css.map": "/static/css/main.1766eb4d.css.map",
+    "main.5f1be492.js.map": "/static/js/main.5f1be492.js.map",
     "787.76303224.chunk.js.map": "/static/js/787.76303224.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a9bf8b9.css",
-    "static/js/main.91245172.js"
+    "static/css/main.1766eb4d.css",
+    "static/js/main.5f1be492.js"
   ]
 }

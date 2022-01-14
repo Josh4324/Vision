@@ -22,97 +22,97 @@ export default function Download() {
         newimgs.push({
           uri: item.link,
           x: 100,
-          y: 180,
+          y: 140,
           sw: 140,
-          sh: 120,
+          sh: 100,
         });
 
         newtext.push({
           text: item.name,
           x: 100,
-          y: 280,
+          y: 240,
           xt: 105,
-          yt: 293,
+          yt: 253,
         });
       }
 
       if (index === 1) {
         newimgs.push({
           uri: "/images/logo_danox70.jpg",
-          x: 130,
-          y: 120,
-          sw: 60,
-          sh: 40,
+          x: 30,
+          y: 60,
+          sw: 65,
+          sh: 45,
         });
 
         newimgs.push({
           uri: item.link,
           x: 255,
-          y: 180,
+          y: 140,
           sw: 140,
-          sh: 120,
+          sh: 100,
         });
 
         newtext.push({
           text: item.name,
           x: 255,
-          y: 280,
+          y: 240,
           xt: 260,
-          yt: 293,
+          yt: 253,
         });
       }
 
       if (index === 2) {
         newimgs.push({
           uri: item.link,
-          x: 55,
-          y: 310,
+          x: 45,
+          y: 270,
           sw: 140,
-          sh: 120,
+          sh: 100,
         });
 
         newtext.push({
           text: item.name,
-          x: 55,
-          y: 410,
-          xt: 60,
-          yt: 423,
+          x: 45,
+          y: 370,
+          xt: 50,
+          yt: 383,
         });
       }
 
       if (index === 3) {
         newimgs.push({
           uri: item.link,
-          x: 200,
-          y: 310,
+          x: 190,
+          y: 270,
           sw: 140,
-          sh: 120,
+          sh: 100,
         });
 
         newtext.push({
           text: item.name,
-          x: 200,
-          y: 410,
-          xt: 210,
-          yt: 425,
+          x: 190,
+          y: 370,
+          xt: 195,
+          yt: 385,
         });
       }
 
       if (index === 4) {
         newimgs.push({
           uri: item.link,
-          x: 345,
-          y: 310,
+          x: 335,
+          y: 270,
           sw: 140,
-          sh: 120,
+          sh: 100,
         });
 
         newtext.push({
           text: item.name,
-          x: 345,
-          y: 410,
-          xt: 350,
-          yt: 423,
+          x: 335,
+          y: 370,
+          xt: 340,
+          yt: 383,
         });
       }
       return "";
@@ -150,18 +150,18 @@ export default function Download() {
         if (numbercheck === numlen) {
           console.log(numlen);
           console.log("done");
-          ctx.font = "14px Futura";
+          ctx.font = "24px ArlaStrong";
           ctx.fillStyle = "#cc0125";
-          ctx.fillText("MY VISION BOARD", 200, 150);
-          ctx.font = "12px Futura";
-          ctx.fillStyle = "white";
-          ctx.fillText(`We wish you all the best, ${name}`, 260, 450);
+          ctx.fillText("MY VISION BOARD", 130, 120);
+          ctx.font = "14px Houschka_Rounded";
+          ctx.fillStyle = "red";
+          ctx.fillText(`Believe in yourself and go for it, ${name}`, 100, 410);
 
           newtext.map((item) => {
             ctx.fillStyle = "black";
             ctx.fillRect(item.x, item.y, 140, 20);
             ctx.fillStyle = "white";
-            ctx.font = "10px Futura";
+            ctx.font = "10px Houschka_Rounded";
             ctx.fillText(item.text, item.xt, item.yt);
           });
 
@@ -198,9 +198,9 @@ export default function Download() {
       ctx.fillStyle = "#cc0125";
       ctx.fillRect(0, 0, 500, 500);
 
-      loadImage("/images/share.png")
+      loadImage("/images/vb.png")
         .then((img) => {
-          ctx.drawImage(img, 50, 55, 400, 400);
+          ctx.drawImage(img, 0, 0, 500, 500);
         })
         .then(() => {
           newimgs.forEach(depict);
@@ -213,11 +213,10 @@ export default function Download() {
   }, []);
 
   const download = () => {
-    const canvas = document.getElementById("canvas");
-    const dataURL = canvas.toDataURL("image/jpeg", 1.0);
     const a = document.createElement("a");
     a.download = "vision.png";
-    a.href = dataURL;
+    a.href = pic;
+    a.target = "_blank";
     document.body.appendChild(a);
     a.click();
   };
@@ -274,22 +273,23 @@ export default function Download() {
         ) : (
           <span style={{ color: "white" }}>loading....</span>
         )}
-
-        <button
-          style={{
-            backgroundColor: "yellow",
-            display: "block",
-            borderRadius: "10px",
-            border: "none",
-            paddingLeft: "5px",
-            paddingRight: "5px",
-            color: "#cc0125",
-            fontWeight: "bold",
-          }}
-          onClick={download}
-        >
-          DOWNLOAD
-        </button>
+        {pic.length > 0 ? (
+          <button
+            style={{
+              backgroundColor: "yellow",
+              display: "block",
+              borderRadius: "10px",
+              border: "none",
+              paddingLeft: "5px",
+              paddingRight: "5px",
+              color: "#cc0125",
+              fontWeight: "bold",
+            }}
+            onClick={download}
+          >
+            DOWNLOAD
+          </button>
+        ) : null}
       </div>
 
       <Footer style={{ marginTop: "900px" }} />
