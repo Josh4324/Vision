@@ -38,7 +38,7 @@ export default function Download() {
 
       if (index === 1) {
         newimgs.push({
-          uri: "/images/logo_danox70.jpg",
+          uri: "/images/logo.png",
           x: 30,
           y: 60,
           sw: 65,
@@ -153,9 +153,9 @@ export default function Download() {
           ctx.font = "24px ArlaStrong";
           ctx.fillStyle = "#cc0125";
           ctx.fillText("MY VISION BOARD", 130, 120);
-          ctx.font = "14px Houschka_Rounded";
+          ctx.font = "16px Houschka_Rounded";
           ctx.fillStyle = "red";
-          ctx.fillText(`Believe in yourself and go for it, ${name}`, 100, 410);
+          ctx.fillText(`Believe in yourself and Go For It, ${name}`, 95, 410);
 
           newtext.map((item) => {
             ctx.fillStyle = "black";
