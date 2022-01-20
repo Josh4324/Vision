@@ -33,14 +33,14 @@ export default function Family(props) {
           <div
             onClick={() => {
               addNewGoal(
-                "Go on a vacation",
+                "Go on a family vacation",
                 "box51",
-                "images/Go on a vacation.jpg"
+                "images/family.jpeg"
               );
             }}
             className="box51 boxtext1"
           >
-            <span>Go on a vacation</span>
+            <span>Go on a family vacation</span>
           </div>
 
           <div
@@ -71,11 +71,15 @@ export default function Family(props) {
 
           <div
             onClick={() => {
-              addNewGoal("Make more friends", "box54", "images/family.jpg");
+              addNewGoal(
+                "Build quality connections",
+                "box54",
+                "images/family.jpg"
+              );
             }}
             className="box54 boxtext1"
           >
-            <span>Make more friends</span>
+            <span>Build quality connections</span>
           </div>
 
           <div

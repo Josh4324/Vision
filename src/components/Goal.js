@@ -187,7 +187,7 @@ export default function Goal() {
 
                   try {
                     const res = await axios.post(
-                      `https://danovisionboard.com/api/v1/user/`,
+                      `http://localhost:8080/api/v1/user/`,
                       cred
                     );
                     navigate("/download");

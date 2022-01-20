@@ -22,7 +22,7 @@ export default function Career(props) {
     <div>
       <main style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
         <div className="board-goals-title box">
-        <Link to="/board" className="back-link">
+          <Link to="/board" className="back-link">
             <i style={{ paddingRight: "10px" }} class="fas fa-arrow-left"></i>
           </Link>{" "}
           <span>Career</span>
@@ -44,14 +44,14 @@ export default function Career(props) {
           <div
             onClick={() => {
               addNewGoal(
-                "Learn a new skill",
+                "Develop my talent/Learn a skill",
                 "box42",
                 "images/Learn a new skill.jpg"
               );
             }}
             className="box42 boxtext1"
           >
-            <span>Learn a new skill</span>
+            <span>Develop my talent/Learn a skill</span>
           </div>
           <div
             onClick={() => {

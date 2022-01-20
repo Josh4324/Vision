@@ -14,7 +14,8 @@ export default function Download() {
     return () => {};
   }, []);
   useEffect(() => {
-    const name = localStorage.getItem("visionName");
+    const name = localStorage.getItem("visionName").toUpperCase();
+    console.log(name);
     const goals = JSON.parse(localStorage.getItem("vision"));
     const numlen = goals.length + 1;
     goals.map((item, index) => {
@@ -146,16 +147,15 @@ export default function Download() {
           myOptions.sw,
           myOptions.sh
         );
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         numbercheck = numbercheck + 1;
         if (numbercheck === numlen) {
-          console.log(numlen);
-          console.log("done");
           ctx.font = "24px ArlaStrong";
           ctx.fillStyle = "#cc0125";
           ctx.fillText("MY VISION BOARD", 130, 120);
-          ctx.font = "16px Houschka_Rounded";
-          ctx.fillStyle = "red";
-          ctx.fillText(`Believe in yourself and Go For It, ${name}`, 95, 410);
+          ctx.font = "bold 14px Houschka_Rounded";
+          ctx.fillStyle = "#cc0125";
+          ctx.fillText(`Believe in yourself and Go For It, ${name}`, 90, 410);
 
           newtext.map((item) => {
             ctx.fillStyle = "black";
@@ -184,6 +184,14 @@ export default function Download() {
                   formData
                 );
                 setPic(res.data.data.image);
+                const res2 = await axios.post(
+                  `https://danovisionboard.com/api/v1/user/email`,
+                  {
+                    email,
+                    link: res.data.data.image,
+                    name,
+                  }
+                );
               }
             } catch (err) {
               NotificationManager.error("An error occured", "Error");

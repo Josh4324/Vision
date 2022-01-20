@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1766eb4d.css",
-    "main.js": "/static/js/main.95ed8adc.js",
+    "main.css": "/static/css/main.7e3d5a82.css",
+    "main.js": "/static/js/main.bf3c34d8.js",
     "static/js/787.76303224.chunk.js": "/static/js/787.76303224.chunk.js",
     "static/media/Houschka-rounded-alt-demi-bold.svg": "/static/media/Houschka-rounded-alt-demi-bold.b26f9a7e5b8c42e8bf0e.svg",
     "static/media/Houschka-rounded-alt-medium.svg": "/static/media/Houschka-rounded-alt-medium.a7c209c299afbe54f1c4.svg",
@@ -14,7 +14,6 @@
     "static/media/Houschka-rounded-alt-demi-bold.woff": "/static/media/Houschka-rounded-alt-demi-bold.aca57421dc8fc5bedc51.woff",
     "static/media/Houschka-rounded-alt-bold.woff": "/static/media/Houschka-rounded-alt-bold.c64fdf4e65068eab4332.woff",
     "static/media/page-bg-top.jpg": "/static/media/page-bg-top.bb50b02d354881fe651b.jpg",
-    "static/media/Go on a vacation.jpg": "/static/media/Go on a vacation.2a7296bc44759f88aabd.jpg",
     "static/media/Learn a new skill.jpg": "/static/media/Learn a new skill.30ca62ee05dc5505190d.jpg",
     "static/media/ARLASTRONG-Regular.ttf": "/static/media/ARLASTRONG-Regular.5eec9962aa0d86e7b770.ttf",
     "static/media/GothamRounded-Book.eot": "/static/media/GothamRounded-Book.86e36550cbba9a983787.eot",
@@ -22,6 +21,7 @@
     "static/media/Eat more fruitshealthy foods.jpg": "/static/media/Eat more fruitshealthy foods.92b818c2f2b4c01e0ef0.jpg",
     "static/media/Start working out.jpg": "/static/media/Start working out.3167a7dfa3cbfbc55e45.jpg",
     "static/media/spa-and-wellness.jpg": "/static/media/spa-and-wellness.e94a2391040154ed7ab6.jpg",
+    "static/media/family.jpeg": "/static/media/family.1a98ee615dbe905aeb41.jpeg",
     "static/media/health.jpg": "/static/media/health.43b48697cd45480b7078.jpg",
     "static/media/Get a professional certificate.jpg": "/static/media/Get a professional certificate.ed517490f3c163899e8c.jpg",
     "static/media/Have a monthly budget.jpg": "/static/media/Have a monthly budget.d03e17cb5c07be37d486.jpg",
@@ -54,12 +54,12 @@
     "static/media/notification.woff?s3g3t9": "/static/media/notification.c392cd33d9d9de730f9d.woff",
     "static/media/notification.ttf?s3g3t9": "/static/media/notification.c5d9251ea82e42f75381.ttf",
     "index.html": "/index.html",
-    "main.1766eb4d.css.map": "/static/css/main.1766eb4d.css.map",
-    "main.95ed8adc.js.map": "/static/js/main.95ed8adc.js.map",
+    "main.7e3d5a82.css.map": "/static/css/main.7e3d5a82.css.map",
+    "main.bf3c34d8.js.map": "/static/js/main.bf3c34d8.js.map",
     "787.76303224.chunk.js.map": "/static/js/787.76303224.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1766eb4d.css",
-    "static/js/main.95ed8adc.js"
+    "static/css/main.7e3d5a82.css",
+    "static/js/main.bf3c34d8.js"
   ]
 }
