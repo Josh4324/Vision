@@ -1,11 +1,20 @@
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { NotificationManager } from "react-notifications";
+import ReactGA from "react-ga";
 
 export default function Career(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
+  }, []);
+  useEffect(() => {
+    (() => {
+      ReactGA.event({
+        category: "Pages",
+        action: "Accessed the Career Page",
+      });
+    })();
   }, []);
   const { addGoal } = props;
   const navigate = useNavigate();

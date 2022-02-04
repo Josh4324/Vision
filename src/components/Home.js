@@ -2,8 +2,11 @@ import React, { useEffect, useRef } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import ReactGA from "react-ga";
 
 export default function Home() {
+  const TRACKING_ID = "298615363"; // YOUR_OWN_TRACKING_IDs
+  ReactGA.initialize(TRACKING_ID);
   const goals = JSON.parse(localStorage.getItem("vision"));
   let linkurl;
   if (goals !== null && goals.length === 5) {
@@ -19,7 +22,21 @@ export default function Home() {
     return () => {};
   }, []);
 
+  useEffect(() => {
+    (() => {
+      ReactGA.event({
+        category: "Pages",
+        action: "Accessed the Home Page",
+      });
+    })();
+  }, []);
+
   const playVideo = () => {
+    ReactGA.event({
+      category: "User",
+      action: "Played Dano Videos",
+    });
+
     videoRef.current.classList.toggle("none");
     modalRef.current.classList.add("pop1");
     videoRef.current.play();

@@ -5,8 +5,17 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { NotificationManager } from "react-notifications";
 import axios from "axios";
+import ReactGA from "react-ga";
 
 export default function Goal() {
+  useEffect(() => {
+    (() => {
+      ReactGA.event({
+        category: "Pages",
+        action: "Accessed the Goals Page",
+      });
+    })();
+  }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
@@ -190,6 +199,10 @@ export default function Goal() {
                       `https://danovisionboard.com/api/v1/user/`,
                       cred
                     );
+                    ReactGA.event({
+                      category: "Vison",
+                      action: "Created a Vision Board",
+                    });
                     navigate("/download");
                     return res;
                   } catch (err) {

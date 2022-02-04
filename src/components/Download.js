@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { NotificationManager } from "react-notifications";
 import axios from "axios";
+import ReactGA from "react-ga";
 
 export default function Download() {
   const [pic, setPic] = useState("");
@@ -218,6 +219,14 @@ export default function Download() {
     generateImage();
 
     return () => {};
+  }, []);
+  useEffect(() => {
+    (() => {
+      ReactGA.event({
+        category: "Pages",
+        action: "Accessed the Download Page",
+      });
+    })();
   }, []);
 
   const download = () => {

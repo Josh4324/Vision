@@ -2,11 +2,21 @@ import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import ReactGA from "react-ga";
 
 export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
+  }, []);
+
+  useEffect(() => {
+    (() => {
+      ReactGA.event({
+        category: "Pages",
+        action: "Accessed the Vision Board Page",
+      });
+    })();
   }, []);
   return (
     <div className="app-wrapper">
@@ -18,19 +28,29 @@ export default function Home() {
 
         <section className="board-main-section">
           <Link className="link" to="/category/finance">
-            <div className="box1 boxtext"><span>Finance</span></div>
+            <div className="box1 boxtext">
+              <span>Finance</span>
+            </div>
           </Link>
           <Link className="link" to="/category/health">
-            <div className="box2 boxtext"><span>Health</span></div>
+            <div className="box2 boxtext">
+              <span>Health</span>
+            </div>
           </Link>
           <Link className="link" to="/category/education">
-            <div className="box3 boxtext"><span>Education</span></div>
+            <div className="box3 boxtext">
+              <span>Education</span>
+            </div>
           </Link>
           <Link className="link" to="/category/career">
-            <div className="box4 boxtext"><span>Career</span></div>
+            <div className="box4 boxtext">
+              <span>Career</span>
+            </div>
           </Link>
           <Link className="link" to="/category/family">
-            <div className="box5 boxtext"><span>Family</span></div>
+            <div className="box5 boxtext">
+              <span>Family</span>
+            </div>
           </Link>
         </section>
       </main>

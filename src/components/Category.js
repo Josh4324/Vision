@@ -7,13 +7,24 @@ import Education from "./Education";
 import Family from "./Family";
 import Career from "./Career";
 import Health from "./Health";
+import ReactGA from "react-ga";
 
 export default function Category() {
+  const { category } = useParams();
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
   }, []);
-  const { category } = useParams();
+  useEffect(() => {
+    cat();
+  }, []);
+  const cat = () => {
+    ReactGA.event({
+      category: "Pages",
+      action: `Accessed the ${category} Career Page`,
+    });
+  };
+
   const addGoal = (name) => {
     let goalList = [];
     let allgoals = JSON.parse(localStorage.getItem("vision"));
