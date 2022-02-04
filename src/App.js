@@ -7,8 +7,15 @@ import "react-notifications/lib/notifications.css";
 import Category from "./components/Category";
 import Goal from "./components/Goal";
 import Download from "./components/Download";
+import ReactGA from "react-ga";
 
 function App() {
+  const TRACKING_ID = "298615363"; // YOUR_OWN_TRACKING_IDs
+  ReactGA.initialize(TRACKING_ID, {
+    gaOptions: {
+      siteSpeedSampleRate: 100,
+    },
+  });
   return (
     <BrowserRouter>
       <Routes>

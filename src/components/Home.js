@@ -6,7 +6,6 @@ import ReactGA from "react-ga";
 
 export default function Home() {
   const TRACKING_ID = "298615363"; // YOUR_OWN_TRACKING_IDs
-  ReactGA.initialize(TRACKING_ID);
   const goals = JSON.parse(localStorage.getItem("vision"));
   let linkurl;
   if (goals !== null && goals.length === 5) {
@@ -24,6 +23,7 @@ export default function Home() {
 
   useEffect(() => {
     (() => {
+      ReactGA.initialize(TRACKING_ID);
       ReactGA.event({
         category: "Pages",
         action: "Accessed the Home Page",

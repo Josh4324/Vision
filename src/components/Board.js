@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import ReactGA from "react-ga";
 
 export default function Home() {
+  const TRACKING_ID = "298615363";
   useEffect(() => {
     window.scrollTo(0, 0);
     return () => {};
@@ -12,6 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     (() => {
+      ReactGA.initialize(TRACKING_ID);
       ReactGA.event({
         category: "Pages",
         action: "Accessed the Vision Board Page",
