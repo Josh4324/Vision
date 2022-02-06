@@ -6,7 +6,7 @@ export default function Header() {
   useEffect(() => {
     (() => {
       ReactGA.event({
-        category: "User",
+        category: "Pages",
         action: "Played Dano Videos",
       });
     })();

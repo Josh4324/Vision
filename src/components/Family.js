@@ -82,18 +82,7 @@ export default function Family(props) {
             <span>Build quality connections</span>
           </div>
 
-          <div
-            onClick={() => {
-              addNewGoal(
-                "Find/Develop my talent",
-                "box55",
-                "images/FindDevelop my talent.jpg"
-              );
-            }}
-            className="box55 boxtext1"
-          >
-            <span>Find/Develop my talent</span>
-          </div>
+         
         </section>
       </main>
     </div>
